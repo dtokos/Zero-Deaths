@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9835121622B5575F008F389B /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9835121422B5575F008F389B /* Application.cpp */; };
+		9835121922B558B1008F389B /* ApplicationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9835121722B558B1008F389B /* ApplicationFactory.cpp */; };
+		9835121C22B55F74008F389B /* Letterbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9835121A22B55F74008F389B /* Letterbox.cpp */; };
 		98C49A6922B5503100084A65 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98C49A6822B5503100084A65 /* main.cpp */; };
 		98C49A7222B5514700084A65 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A6F22B5514700084A65 /* libsfml-window.2.5.1.dylib */; };
 		98C49A7322B5514700084A65 /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7022B5514700084A65 /* libsfml-graphics.2.5.1.dylib */; };
@@ -30,6 +33,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9835121422B5575F008F389B /* Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
+		9835121522B5575F008F389B /* Application.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
+		9835121722B558B1008F389B /* ApplicationFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ApplicationFactory.cpp; sourceTree = "<group>"; };
+		9835121822B558B1008F389B /* ApplicationFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ApplicationFactory.hpp; sourceTree = "<group>"; };
+		9835121A22B55F74008F389B /* Letterbox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Letterbox.cpp; sourceTree = "<group>"; };
+		9835121B22B55F74008F389B /* Letterbox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Letterbox.hpp; sourceTree = "<group>"; };
 		98C49A4F22B54FA600084A65 /* Zero-Deaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zero-Deaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C49A5322B54FA600084A65 /* Zero-Deaths-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zero-Deaths-Info.plist"; sourceTree = "<group>"; };
 		98C49A6822B5503100084A65 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -94,6 +103,12 @@
 			isa = PBXGroup;
 			children = (
 				98C49A6822B5503100084A65 /* main.cpp */,
+				9835121522B5575F008F389B /* Application.hpp */,
+				9835121422B5575F008F389B /* Application.cpp */,
+				9835121822B558B1008F389B /* ApplicationFactory.hpp */,
+				9835121722B558B1008F389B /* ApplicationFactory.cpp */,
+				9835121B22B55F74008F389B /* Letterbox.hpp */,
+				9835121A22B55F74008F389B /* Letterbox.cpp */,
 			);
 			name = src;
 			path = ../../../src;
@@ -197,7 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9835121622B5575F008F389B /* Application.cpp in Sources */,
+				9835121922B558B1008F389B /* ApplicationFactory.cpp in Sources */,
 				98C49A6922B5503100084A65 /* main.cpp in Sources */,
+				9835121C22B55F74008F389B /* Letterbox.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
