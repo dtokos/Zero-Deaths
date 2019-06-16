@@ -1,5 +1,5 @@
-#include "Application.hpp"
-#include "ApplicationFactory.hpp"
+#include "Application/Application.hpp"
+#include "Application/ApplicationFactory.hpp"
 
 int main(int argc, const char* argv[]) {
 	ApplicationFactory appFactory;

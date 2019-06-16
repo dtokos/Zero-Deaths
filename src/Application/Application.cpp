@@ -5,5 +5,5 @@ Application::Application(sf::RenderWindow* window, sf::View* view, Letterbox* le
 }
 
 void Application::run() {
-	
+	}
 }
