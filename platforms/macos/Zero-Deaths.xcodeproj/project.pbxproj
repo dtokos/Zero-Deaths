@@ -12,10 +12,15 @@
 		98C49A7422B5514700084A65 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7122B5514700084A65 /* libsfml-system.2.5.1.dylib */; };
 		98C49A7B22B5562C00084A65 /* assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98C49A7722B5561800084A65 /* assets */; };
 		98C49A7C22B5562C00084A65 /* levels in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98C49A7822B5561800084A65 /* levels */; };
+		98CABB5822B66A4300698549 /* ConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98CABB5622B66A4300698549 /* ConfigParser.cpp */; };
+		98CABB5A22B6A43200698549 /* bindings.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 98CABB5922B6A43200698549 /* bindings.cfg */; };
+		98CABB5B22B6A43C00698549 /* bindings.cfg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98CABB5922B6A43200698549 /* bindings.cfg */; };
 		98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6A722B63B5100942A49 /* Letterbox.cpp */; };
 		98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6A822B63B5100942A49 /* ApplicationFactory.cpp */; };
 		98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6AB22B63B5100942A49 /* Application.cpp */; };
 		98EDD6B022B63B5200942A49 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6AC22B63B5100942A49 /* main.cpp */; };
+		98EDD6B622B6640F00942A49 /* ConfigLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */; };
+		98EDD6B922B6648600942A49 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B722B6648600942A49 /* Config.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
+				98CABB5B22B6A43C00698549 /* bindings.cfg in CopyFiles */,
 				98C49A7B22B5562C00084A65 /* assets in CopyFiles */,
 				98C49A7C22B5562C00084A65 /* levels in CopyFiles */,
 			);
@@ -40,6 +46,9 @@
 		98C49A7122B5514700084A65 /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "../../lib/macos/SFML/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
 		98C49A7722B5561800084A65 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../../assets; sourceTree = "<group>"; };
 		98C49A7822B5561800084A65 /* levels */ = {isa = PBXFileReference; lastKnownFileType = folder; name = levels; path = ../../../levels; sourceTree = "<group>"; };
+		98CABB5622B66A4300698549 /* ConfigParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigParser.cpp; sourceTree = "<group>"; };
+		98CABB5722B66A4300698549 /* ConfigParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConfigParser.hpp; sourceTree = "<group>"; };
+		98CABB5922B6A43200698549 /* bindings.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bindings.cfg; path = ../../../bindings.cfg; sourceTree = "<group>"; };
 		98EDD6A622B63B5100942A49 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		98EDD6A722B63B5100942A49 /* Letterbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Letterbox.cpp; sourceTree = "<group>"; };
 		98EDD6A822B63B5100942A49 /* ApplicationFactory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ApplicationFactory.cpp; sourceTree = "<group>"; };
@@ -47,6 +56,10 @@
 		98EDD6AA22B63B5100942A49 /* ApplicationFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ApplicationFactory.hpp; sourceTree = "<group>"; };
 		98EDD6AB22B63B5100942A49 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		98EDD6AC22B63B5100942A49 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigLoader.cpp; sourceTree = "<group>"; };
+		98EDD6B522B6640F00942A49 /* ConfigLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConfigLoader.hpp; sourceTree = "<group>"; };
+		98EDD6B722B6648600942A49 /* Config.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
+		98EDD6B822B6648600942A49 /* Config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +99,7 @@
 				98EDD6A422B63B5100942A49 /* src */,
 				98C49A7722B5561800084A65 /* assets */,
 				98C49A7822B5561800084A65 /* levels */,
+				98CABB5922B6A43200698549 /* bindings.cfg */,
 				98C49A5222B54FA600084A65 /* Supporting Files */,
 			);
 			path = "Zero-Deaths";
@@ -113,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				98EDD6A522B63B5100942A49 /* Application */,
+				98EDD6B322B663E200942A49 /* Controls */,
+				98EDD6B222B663A900942A49 /* Game */,
 				98EDD6AC22B63B5100942A49 /* main.cpp */,
 			);
 			name = src;
@@ -130,6 +146,26 @@
 				98EDD6A722B63B5100942A49 /* Letterbox.cpp */,
 			);
 			path = Application;
+			sourceTree = "<group>";
+		};
+		98EDD6B222B663A900942A49 /* Game */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Game;
+			sourceTree = "<group>";
+		};
+		98EDD6B322B663E200942A49 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				98EDD6B522B6640F00942A49 /* ConfigLoader.hpp */,
+				98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */,
+				98CABB5722B66A4300698549 /* ConfigParser.hpp */,
+				98CABB5622B66A4300698549 /* ConfigParser.cpp */,
+				98EDD6B822B6648600942A49 /* Config.hpp */,
+				98EDD6B722B6648600942A49 /* Config.cpp */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +226,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98CABB5A22B6A43200698549 /* bindings.cfg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,7 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */,
+				98EDD6B622B6640F00942A49 /* ConfigLoader.cpp in Sources */,
+				98CABB5822B66A4300698549 /* ConfigParser.cpp in Sources */,
 				98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */,
+				98EDD6B922B6648600942A49 /* Config.cpp in Sources */,
 				98EDD6B022B63B5200942A49 /* main.cpp in Sources */,
 				98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */,
 			);
