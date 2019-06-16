@@ -1,6 +1,8 @@
 #include "Letterbox.hpp"
 
-Letterbox::Letterbox(sf::View* view, float desiredSizeRatio) : view(view), desiredSizeRatio(desiredSizeRatio) {
+Letterbox::Letterbox(sf::View* view, float desiredSizeRatio) :
+	view(view),
+	desiredSizeRatio(desiredSizeRatio) {
 	
 }
 
