@@ -7,13 +7,13 @@ class Letterbox {
 	
 public:
 	Letterbox(sf::View* view, float desiredSizeRatio);
-	void apply(float windowWidth, float windowHeight);
+	void apply(float currentWidth, float currentHeight);
 	
 private:
 	sf::View* view;
 	float desiredSizeRatio;
 	
-	sf::FloatRect calculateViewport(float windowWidth, float windowHeight);
+	sf::FloatRect calculateViewport(float currentWidth, float currentHeight);
 	float calculateSizeRatio(float width, float height);
 	bool shouldAddHorizontalSpacing(float currentSizeRatio);
 	float calculateSize(float currentSizeRatio);

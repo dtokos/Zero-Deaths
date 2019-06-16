@@ -4,20 +4,20 @@ Letterbox::Letterbox(sf::View* view, float desiredSizeRatio) : view(view), desir
 	
 }
 
-void Letterbox::apply(float windowWidth, float windowHeight) {
-	sf::FloatRect viewPort = this->calculateViewport(windowWidth, windowHeight);
+void Letterbox::apply(float currentWidth, float currentHeight) {
+	sf::FloatRect viewPort = this->calculateViewport(currentWidth, currentHeight);
 	this->view->setViewport(viewPort);
 }
 
-sf::FloatRect Letterbox::calculateViewport(float windowWidth, float windowHeight) {
-	float windowRatio = this->calculateSizeRatio(windowWidth, windowHeight);
+sf::FloatRect Letterbox::calculateViewport(float currentWidth, float currentHeight) {
+	float currentRatio = this->calculateSizeRatio(currentWidth, currentHeight);
 	sf::FloatRect viewport(0, 0, 1, 1);
 	
-	if (this->shouldAddHorizontalSpacing(windowRatio)) {
-		viewport.width = this->calculateSize(windowRatio);
+	if (this->shouldAddHorizontalSpacing(currentRatio)) {
+		viewport.width = this->calculateSize(currentRatio);
 		viewport.left = this->calculatePosition(viewport.width);
 	} else {
-		viewport.height = this->calculateSize(windowRatio);
+		viewport.height = this->calculateSize(currentRatio);
 		viewport.top = this->calculatePosition(viewport.height);
 	}
 	
