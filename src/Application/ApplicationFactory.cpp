@@ -8,6 +8,8 @@
 #define WINDOW_NAME "Zero-Deaths"
 #define FRAME_LIMIT 60
 
+#define CONFIG_NAME "bindings.cfg"
+
 ApplicationFactory::ApplicationFactory() {
 	
 }
@@ -38,4 +40,20 @@ sf::View* ApplicationFactory::makeView() {
 
 Letterbox* ApplicationFactory::makeLetterbox(sf::View* view) {
 	return new Letterbox(view, WINDOW_RATIO);
+}
+
+Config* ApplicationFactory::defaultConfig() {
+	return new Config(sf::Keyboard::Key::Right, sf::Keyboard::Key::Left, sf::Keyboard::Key::Up, sf::Keyboard::Key::R);
+};
+
+Config* ApplicationFactory::loadConfig() {
+	ConfigLoader loader;
+	Config* defaultConfig = this->defaultConfig();
+	Config* userConfig = loader.load(CONFIG_NAME);
+	
+	defaultConfig->merge(*userConfig);
+	
+	delete userConfig;
+	
+	return defaultConfig;
 }
