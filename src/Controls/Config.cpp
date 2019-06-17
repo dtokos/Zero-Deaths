@@ -1,45 +1,59 @@
 #include "Config.hpp"
 
 Config::Config(sf::Keyboard::Key rightKey, sf::Keyboard::Key leftKey, sf::Keyboard::Key jumpKey, sf::Keyboard::Key restartKey) :
-	rightKey(rightKey),
-	leftKey(leftKey),
-	jumpKey(jumpKey),
-	restartKey(restartKey) {
+	keyMap {
+		{KeyType::rightKey, rightKey},
+		{KeyType::leftKey, leftKey},
+		{KeyType::jumpKey, jumpKey},
+		{KeyType::restartKey, restartKey},
+	} {
 	
 }
 
 void Config::merge(Config &config) {
-	this->setKey(config.right(), &this->rightKey);
-	this->setKey(config.left(), &this->leftKey);
-	this->setKey(config.jump(), &this->jumpKey);
-	this->setKey(config.restart(), &this->restartKey);
+	this->bindKey(config.right(), KeyType::rightKey);
+	this->bindKey(config.left(), KeyType::leftKey);
+	this->bindKey(config.jump(), KeyType::jumpKey);
+	this->bindKey(config.restart(), KeyType::restartKey);
 }
 
 sf::Keyboard::Key Config::right() {
-	return this->rightKey;
+	return this->getKey(KeyType::rightKey);
 }
 
 sf::Keyboard::Key Config::left() {
-	return this->leftKey;
+	return this->getKey(KeyType::leftKey);
 }
 
 sf::Keyboard::Key Config::jump() {
-	return this->jumpKey;
+	return this->getKey(KeyType::jumpKey);
 }
 
 sf::Keyboard::Key Config::restart() {
-	return this->restartKey;
+	return this->getKey(KeyType::restartKey);
 }
 
-void Config::setKey(sf::Keyboard::Key value, sf::Keyboard::Key* destination) {
-	if (value != sf::Keyboard::Key::Unknown)
-		if (!this->isAlreadyAssigned(value))
-			*destination = value;
+void Config::bindKey(sf::Keyboard::Key value, const KeyType& destination) {
+	if (value != sf::Keyboard::Key::Unknown) {
+		this->unbindSameKeys(value);
+		this->setKey(value, destination);
+	}
 }
 
-bool Config::isAlreadyAssigned(sf::Keyboard::Key& value) {
-	return value == this->rightKey ||
-		value == this->leftKey ||
-		value == this->jumpKey ||
-		value == this->restartKey;
+void Config::unbindSameKeys(sf::Keyboard::Key& value) {
+	for (auto& pair : this->keyMap)
+		if (value == pair.second)
+			this->unbindKey(pair.first);
+}
+
+void Config::unbindKey(const KeyType& destination) {
+	this->setKey(sf::Keyboard::Key::Unknown, destination);
+}
+
+sf::Keyboard::Key Config::getKey(const KeyType& destination) {
+	return this->keyMap[destination];
+}
+
+void Config::setKey(sf::Keyboard::Key value, const KeyType& destination) {
+	this->keyMap[destination] = value;
 }

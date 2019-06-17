@@ -1,6 +1,7 @@
 #ifndef Config_hpp
 #define Config_hpp
 
+#include <map>
 #include <SFML/Window.hpp>
 
 class Config {
@@ -14,13 +15,20 @@ public:
 	sf::Keyboard::Key restart();
 	
 private:
-	sf::Keyboard::Key rightKey;
-	sf::Keyboard::Key leftKey;
-	sf::Keyboard::Key jumpKey;
-	sf::Keyboard::Key restartKey;
+	enum KeyType {
+		leftKey,
+		rightKey,
+		jumpKey,
+		restartKey
+	};
 	
-	void setKey(sf::Keyboard::Key value, sf::Keyboard::Key* destination);
-	bool isAlreadyAssigned(sf::Keyboard::Key& value);
+	std::map<KeyType, sf::Keyboard::Key> keyMap;
+	
+	void bindKey(sf::Keyboard::Key value, const KeyType& destination);
+	void unbindSameKeys(sf::Keyboard::Key& value);
+	void unbindKey(const KeyType& destination);
+	sf::Keyboard::Key getKey(const KeyType& destination);
+	void setKey(sf::Keyboard::Key value, const KeyType& destination);
 	
 };
 
