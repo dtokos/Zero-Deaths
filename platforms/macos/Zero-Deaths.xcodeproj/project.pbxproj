@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		98B731BD22B94E980020AFD5 /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B731BB22B94E980020AFD5 /* AssetManager.cpp */; };
+		98B731C022B955A20020AFD5 /* AssetNotFound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B731BE22B955A20020AFD5 /* AssetNotFound.cpp */; };
 		98C49A7222B5514700084A65 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A6F22B5514700084A65 /* libsfml-window.2.5.1.dylib */; };
 		98C49A7322B5514700084A65 /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7022B5514700084A65 /* libsfml-graphics.2.5.1.dylib */; };
 		98C49A7422B5514700084A65 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7122B5514700084A65 /* libsfml-system.2.5.1.dylib */; };
@@ -39,6 +41,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		98B731BB22B94E980020AFD5 /* AssetManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
+		98B731BC22B94E980020AFD5 /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
+		98B731BE22B955A20020AFD5 /* AssetNotFound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetNotFound.cpp; sourceTree = "<group>"; };
+		98B731BF22B955A20020AFD5 /* AssetNotFound.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetNotFound.hpp; sourceTree = "<group>"; };
 		98C49A4F22B54FA600084A65 /* Zero-Deaths.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zero-Deaths.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C49A5322B54FA600084A65 /* Zero-Deaths-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zero-Deaths-Info.plist"; sourceTree = "<group>"; };
 		98C49A6F22B5514700084A65 /* libsfml-window.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.5.1.dylib"; path = "../../lib/macos/SFML/lib/libsfml-window.2.5.1.dylib"; sourceTree = "<group>"; };
@@ -76,6 +82,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		98B731BA22B94E890020AFD5 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				98B731BC22B94E980020AFD5 /* AssetManager.hpp */,
+				98B731BB22B94E980020AFD5 /* AssetManager.cpp */,
+				98B731BF22B955A20020AFD5 /* AssetNotFound.hpp */,
+				98B731BE22B955A20020AFD5 /* AssetNotFound.cpp */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
 		98C49A4522B54FA600084A65 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				98EDD6A522B63B5100942A49 /* Application */,
+				98B731BA22B94E890020AFD5 /* Assets */,
 				98EDD6B322B663E200942A49 /* Controls */,
 				98EDD6B222B663A900942A49 /* Game */,
 				98EDD6AC22B63B5100942A49 /* main.cpp */,
@@ -260,7 +278,9 @@
 				98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */,
 				98EDD6B622B6640F00942A49 /* ConfigLoader.cpp in Sources */,
 				98CABB5822B66A4300698549 /* ConfigParser.cpp in Sources */,
+				98B731C022B955A20020AFD5 /* AssetNotFound.cpp in Sources */,
 				98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */,
+				98B731BD22B94E980020AFD5 /* AssetManager.cpp in Sources */,
 				98EDD6B922B6648600942A49 /* Config.cpp in Sources */,
 				98EDD6B022B63B5200942A49 /* main.cpp in Sources */,
 				98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */,
