@@ -24,11 +24,11 @@ private:
 	
 	std::map<KeyType, sf::Keyboard::Key> keyMap;
 	
-	void bindKey(sf::Keyboard::Key value, const KeyType& destination);
+	void bindKey(const KeyType& key, sf::Keyboard::Key value);
 	void unbindSameKeys(sf::Keyboard::Key& value);
-	void unbindKey(const KeyType& destination);
-	sf::Keyboard::Key getKey(const KeyType& destination);
-	void setKey(sf::Keyboard::Key value, const KeyType& destination);
+	void unbindKey(const KeyType& key);
+	sf::Keyboard::Key getKey(const KeyType& key);
+	void setKey(const KeyType& key, sf::Keyboard::Key value);
 	
 };
 

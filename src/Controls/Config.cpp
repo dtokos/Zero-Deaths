@@ -11,10 +11,10 @@ Config::Config(sf::Keyboard::Key rightKey, sf::Keyboard::Key leftKey, sf::Keyboa
 }
 
 void Config::merge(Config &config) {
-	this->bindKey(config.right(), KeyType::rightKey);
-	this->bindKey(config.left(), KeyType::leftKey);
-	this->bindKey(config.jump(), KeyType::jumpKey);
-	this->bindKey(config.restart(), KeyType::restartKey);
+	this->bindKey(KeyType::rightKey, config.right());
+	this->bindKey(KeyType::leftKey, config.left());
+	this->bindKey(KeyType::jumpKey, config.jump());
+	this->bindKey(KeyType::restartKey, config.restart());
 }
 
 sf::Keyboard::Key Config::right() {
@@ -33,10 +33,10 @@ sf::Keyboard::Key Config::restart() {
 	return this->getKey(KeyType::restartKey);
 }
 
-void Config::bindKey(sf::Keyboard::Key value, const KeyType& destination) {
+void Config::bindKey(const KeyType& key, sf::Keyboard::Key value) {
 	if (value != sf::Keyboard::Key::Unknown) {
 		this->unbindSameKeys(value);
-		this->setKey(value, destination);
+		this->setKey(key, value);
 	}
 }
 
@@ -46,14 +46,14 @@ void Config::unbindSameKeys(sf::Keyboard::Key& value) {
 			this->unbindKey(pair.first);
 }
 
-void Config::unbindKey(const KeyType& destination) {
-	this->setKey(sf::Keyboard::Key::Unknown, destination);
+void Config::unbindKey(const KeyType& key) {
+	this->setKey(key, sf::Keyboard::Key::Unknown);
 }
 
-sf::Keyboard::Key Config::getKey(const KeyType& destination) {
-	return this->keyMap[destination];
+sf::Keyboard::Key Config::getKey(const KeyType& key) {
+	return this->keyMap[key];
 }
 
-void Config::setKey(sf::Keyboard::Key value, const KeyType& destination) {
-	this->keyMap[destination] = value;
+void Config::setKey(const KeyType& key, sf::Keyboard::Key value) {
+	this->keyMap[key] = value;
 }
