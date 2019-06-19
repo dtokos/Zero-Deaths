@@ -5,7 +5,7 @@
 #include <string>
 #include <SFML/Graphics/Texture.hpp>
 #include <SFML/Graphics/Font.hpp>
-#include "./AssetNotFound.hpp"
+#include "AssetNotFound.hpp"
 
 class AssetManager {
 
