@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		980E741922BBDCE500C499A3 /* GameControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E741722BBDCE500C499A3 /* GameControls.cpp */; };
+		980E741C22BBDCFD00C499A3 /* PlayerControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E741A22BBDCFD00C499A3 /* PlayerControls.cpp */; };
 		986BE2F522BA9E6E00B3A18D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F322BA9E6E00B3A18D /* Game.cpp */; };
 		986BE2F822BA9E9600B3A18D /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F622BA9E9600B3A18D /* GameState.cpp */; };
 		986BE2FB22BA9EB200B3A18D /* GameLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F922BA9EB200B3A18D /* GameLoop.cpp */; };
@@ -31,6 +33,9 @@
 		98EDD6B622B6640F00942A49 /* ConfigLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */; };
 		98EDD6B922B6648600942A49 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B722B6648600942A49 /* Config.cpp */; };
 		98F07AFC22BAB29900134E17 /* LevelManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07AFA22BAB29900134E17 /* LevelManager.cpp */; };
+		98F07AFF22BAB8A500134E17 /* CurrentLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07AFD22BAB8A500134E17 /* CurrentLevel.cpp */; };
+		98F07B0222BABCA900134E17 /* PlayerController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07B0022BABCA900134E17 /* PlayerController.cpp */; };
+		98F07B0522BABCB600134E17 /* GameController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07B0322BABCB600134E17 /* GameController.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -49,6 +54,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		980E741722BBDCE500C499A3 /* GameControls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameControls.cpp; sourceTree = "<group>"; };
+		980E741822BBDCE500C499A3 /* GameControls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameControls.hpp; sourceTree = "<group>"; };
+		980E741A22BBDCFD00C499A3 /* PlayerControls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerControls.cpp; sourceTree = "<group>"; };
+		980E741B22BBDCFD00C499A3 /* PlayerControls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayerControls.hpp; sourceTree = "<group>"; };
 		986BE2F322BA9E6E00B3A18D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		986BE2F422BA9E6E00B3A18D /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		986BE2F622BA9E9600B3A18D /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
@@ -90,6 +99,12 @@
 		98EDD6B822B6648600942A49 /* Config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
 		98F07AFA22BAB29900134E17 /* LevelManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelManager.cpp; sourceTree = "<group>"; };
 		98F07AFB22BAB29900134E17 /* LevelManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LevelManager.hpp; sourceTree = "<group>"; };
+		98F07AFD22BAB8A500134E17 /* CurrentLevel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CurrentLevel.cpp; sourceTree = "<group>"; };
+		98F07AFE22BAB8A500134E17 /* CurrentLevel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CurrentLevel.hpp; sourceTree = "<group>"; };
+		98F07B0022BABCA900134E17 /* PlayerController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerController.cpp; sourceTree = "<group>"; };
+		98F07B0122BABCA900134E17 /* PlayerController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayerController.hpp; sourceTree = "<group>"; };
+		98F07B0322BABCB600134E17 /* GameController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameController.cpp; sourceTree = "<group>"; };
+		98F07B0422BABCB600134E17 /* GameController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameController.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +126,8 @@
 			children = (
 				986BE30122BAA10200B3A18D /* Player.hpp */,
 				986BE30022BAA10200B3A18D /* Player.cpp */,
+				980E741B22BBDCFD00C499A3 /* PlayerControls.hpp */,
+				980E741A22BBDCFD00C499A3 /* PlayerControls.cpp */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -124,6 +141,8 @@
 				986BE30722BAA18700B3A18D /* LevelLoader.cpp */,
 				98F07AFB22BAB29900134E17 /* LevelManager.hpp */,
 				98F07AFA22BAB29900134E17 /* LevelManager.cpp */,
+				98F07AFE22BAB8A500134E17 /* CurrentLevel.hpp */,
+				98F07AFD22BAB8A500134E17 /* CurrentLevel.cpp */,
 			);
 			path = Level;
 			sourceTree = "<group>";
@@ -225,6 +244,8 @@
 				986BE2F922BA9EB200B3A18D /* GameLoop.cpp */,
 				986BE2FD22BA9FFF00B3A18D /* GameRenderer.hpp */,
 				986BE2FC22BA9FFF00B3A18D /* GameRenderer.cpp */,
+				980E741822BBDCE500C499A3 /* GameControls.hpp */,
+				980E741722BBDCE500C499A3 /* GameControls.cpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -238,6 +259,10 @@
 				98CABB5622B66A4300698549 /* ConfigParser.cpp */,
 				98EDD6B822B6648600942A49 /* Config.hpp */,
 				98EDD6B722B6648600942A49 /* Config.cpp */,
+				98F07B0122BABCA900134E17 /* PlayerController.hpp */,
+				98F07B0022BABCA900134E17 /* PlayerController.cpp */,
+				98F07B0422BABCB600134E17 /* GameController.hpp */,
+				98F07B0322BABCB600134E17 /* GameController.cpp */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -343,10 +368,15 @@
 				986BE30222BAA10200B3A18D /* Player.cpp in Sources */,
 				98EDD6B922B6648600942A49 /* Config.cpp in Sources */,
 				98EDD6B022B63B5200942A49 /* main.cpp in Sources */,
+				98F07B0522BABCB600134E17 /* GameController.cpp in Sources */,
+				98F07B0222BABCA900134E17 /* PlayerController.cpp in Sources */,
 				98F07AFC22BAB29900134E17 /* LevelManager.cpp in Sources */,
 				986BE2FE22BA9FFF00B3A18D /* GameRenderer.cpp in Sources */,
+				980E741922BBDCE500C499A3 /* GameControls.cpp in Sources */,
 				98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */,
 				986BE2F522BA9E6E00B3A18D /* Game.cpp in Sources */,
+				98F07AFF22BAB8A500134E17 /* CurrentLevel.cpp in Sources */,
+				980E741C22BBDCFD00C499A3 /* PlayerControls.cpp in Sources */,
 				986BE30922BAA18700B3A18D /* LevelLoader.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
