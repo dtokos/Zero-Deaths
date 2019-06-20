@@ -12,3 +12,7 @@ bool Player::isDead() {
 bool Player::isAlive() {
 	return this->alive;
 }
+
+void Player::draw(sf::RenderWindow& window) {
+	
+}

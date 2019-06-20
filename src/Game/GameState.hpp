@@ -10,10 +10,13 @@ class GameState {
 public:
 	GameState(Player* player, LevelManager* levelManager);
 	void restart();
+	void update();
 	
 private:
 	Player* player;
 	LevelManager* levelManager;
+	
+	bool isInFinish();
 	
 };
 

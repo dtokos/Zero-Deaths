@@ -3,12 +3,13 @@
 
 #include "Level.hpp"
 #include "LevelLoader.hpp"
+#include "CurrentLevel.hpp"
 
-class LevelManager {
+class LevelManager : public virtual CurrentLevel {
 	
 public:
 	LevelManager(LevelLoader* levelLoader);
-	Level* current();
+	virtual Level* current();
 	void nextLevel();
 	void loadLevel(const int& levelNumber);
 	bool didFinishAllLevels();

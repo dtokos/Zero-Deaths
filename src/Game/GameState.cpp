@@ -13,3 +13,11 @@ void GameState::restart() {
 		this->levelManager->loadLevel(FIRST_LEVEL);
 }
 
+void GameState::update() {
+	if (this->isInFinish())
+		this->levelManager->nextLevel();
+}
+
+bool GameState::isInFinish() {
+	
+}
