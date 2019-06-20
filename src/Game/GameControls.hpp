@@ -2,6 +2,9 @@
 #define GameControls_hpp
 
 class GameControls {
+
+public:
+	virtual void restart();
 	
 };
 

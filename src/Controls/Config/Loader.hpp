@@ -4,7 +4,7 @@
 #include <string>
 #include <fstream>
 #include <sstream>
-#include "ConfigParser.hpp"
+#include "Parser.hpp"
 
 class ConfigLoader {
 	

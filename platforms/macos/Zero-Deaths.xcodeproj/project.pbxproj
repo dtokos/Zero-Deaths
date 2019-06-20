@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		980E741922BBDCE500C499A3 /* GameControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E741722BBDCE500C499A3 /* GameControls.cpp */; };
 		980E741C22BBDCFD00C499A3 /* PlayerControls.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E741A22BBDCFD00C499A3 /* PlayerControls.cpp */; };
+		980E742322BBDEC400C499A3 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E742122BBDEC400C499A3 /* Player.cpp */; };
+		980E742622BBDECF00C499A3 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E742422BBDECF00C499A3 /* Game.cpp */; };
+		980E742922BBE12900C499A3 /* PlayerMoveType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E742722BBE12900C499A3 /* PlayerMoveType.cpp */; };
 		986BE2F522BA9E6E00B3A18D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F322BA9E6E00B3A18D /* Game.cpp */; };
 		986BE2F822BA9E9600B3A18D /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F622BA9E9600B3A18D /* GameState.cpp */; };
 		986BE2FB22BA9EB200B3A18D /* GameLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F922BA9EB200B3A18D /* GameLoop.cpp */; };
@@ -23,14 +26,14 @@
 		98C49A7422B5514700084A65 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7122B5514700084A65 /* libsfml-system.2.5.1.dylib */; };
 		98C49A7B22B5562C00084A65 /* assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98C49A7722B5561800084A65 /* assets */; };
 		98C49A7C22B5562C00084A65 /* levels in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98C49A7822B5561800084A65 /* levels */; };
-		98CABB5822B66A4300698549 /* ConfigParser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98CABB5622B66A4300698549 /* ConfigParser.cpp */; };
+		98CABB5822B66A4300698549 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98CABB5622B66A4300698549 /* Parser.cpp */; };
 		98CABB5A22B6A43200698549 /* bindings.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 98CABB5922B6A43200698549 /* bindings.cfg */; };
 		98CABB5B22B6A43C00698549 /* bindings.cfg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98CABB5922B6A43200698549 /* bindings.cfg */; };
 		98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6A722B63B5100942A49 /* Letterbox.cpp */; };
 		98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6A822B63B5100942A49 /* ApplicationFactory.cpp */; };
 		98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6AB22B63B5100942A49 /* Application.cpp */; };
 		98EDD6B022B63B5200942A49 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6AC22B63B5100942A49 /* main.cpp */; };
-		98EDD6B622B6640F00942A49 /* ConfigLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */; };
+		98EDD6B622B6640F00942A49 /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B422B6640F00942A49 /* Loader.cpp */; };
 		98EDD6B922B6648600942A49 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B722B6648600942A49 /* Config.cpp */; };
 		98F07AFC22BAB29900134E17 /* LevelManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07AFA22BAB29900134E17 /* LevelManager.cpp */; };
 		98F07AFF22BAB8A500134E17 /* CurrentLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07AFD22BAB8A500134E17 /* CurrentLevel.cpp */; };
@@ -58,6 +61,12 @@
 		980E741822BBDCE500C499A3 /* GameControls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameControls.hpp; sourceTree = "<group>"; };
 		980E741A22BBDCFD00C499A3 /* PlayerControls.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerControls.cpp; sourceTree = "<group>"; };
 		980E741B22BBDCFD00C499A3 /* PlayerControls.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayerControls.hpp; sourceTree = "<group>"; };
+		980E742122BBDEC400C499A3 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		980E742222BBDEC400C499A3 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		980E742422BBDECF00C499A3 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		980E742522BBDECF00C499A3 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		980E742722BBE12900C499A3 /* PlayerMoveType.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = PlayerMoveType.cpp; sourceTree = "<group>"; };
+		980E742822BBE12900C499A3 /* PlayerMoveType.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = PlayerMoveType.hpp; sourceTree = "<group>"; };
 		986BE2F322BA9E6E00B3A18D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		986BE2F422BA9E6E00B3A18D /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		986BE2F622BA9E9600B3A18D /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
@@ -83,8 +92,8 @@
 		98C49A7122B5514700084A65 /* libsfml-system.2.5.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.5.1.dylib"; path = "../../lib/macos/SFML/lib/libsfml-system.2.5.1.dylib"; sourceTree = "<group>"; };
 		98C49A7722B5561800084A65 /* assets */ = {isa = PBXFileReference; lastKnownFileType = folder; name = assets; path = ../../../assets; sourceTree = "<group>"; };
 		98C49A7822B5561800084A65 /* levels */ = {isa = PBXFileReference; lastKnownFileType = folder; name = levels; path = ../../../levels; sourceTree = "<group>"; };
-		98CABB5622B66A4300698549 /* ConfigParser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigParser.cpp; sourceTree = "<group>"; };
-		98CABB5722B66A4300698549 /* ConfigParser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConfigParser.hpp; sourceTree = "<group>"; };
+		98CABB5622B66A4300698549 /* Parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
+		98CABB5722B66A4300698549 /* Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parser.hpp; sourceTree = "<group>"; };
 		98CABB5922B6A43200698549 /* bindings.cfg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = bindings.cfg; path = ../../../bindings.cfg; sourceTree = "<group>"; };
 		98EDD6A622B63B5100942A49 /* Application.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Application.hpp; sourceTree = "<group>"; };
 		98EDD6A722B63B5100942A49 /* Letterbox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Letterbox.cpp; sourceTree = "<group>"; };
@@ -93,8 +102,8 @@
 		98EDD6AA22B63B5100942A49 /* ApplicationFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ApplicationFactory.hpp; sourceTree = "<group>"; };
 		98EDD6AB22B63B5100942A49 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
 		98EDD6AC22B63B5100942A49 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigLoader.cpp; sourceTree = "<group>"; };
-		98EDD6B522B6640F00942A49 /* ConfigLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConfigLoader.hpp; sourceTree = "<group>"; };
+		98EDD6B422B6640F00942A49 /* Loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Loader.cpp; sourceTree = "<group>"; };
+		98EDD6B522B6640F00942A49 /* Loader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Loader.hpp; sourceTree = "<group>"; };
 		98EDD6B722B6648600942A49 /* Config.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
 		98EDD6B822B6648600942A49 /* Config.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Config.hpp; sourceTree = "<group>"; };
 		98F07AFA22BAB29900134E17 /* LevelManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelManager.cpp; sourceTree = "<group>"; };
@@ -121,6 +130,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		980E741D22BBDDF200C499A3 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				98EDD6B522B6640F00942A49 /* Loader.hpp */,
+				98EDD6B422B6640F00942A49 /* Loader.cpp */,
+				98CABB5722B66A4300698549 /* Parser.hpp */,
+				98CABB5622B66A4300698549 /* Parser.cpp */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		980E741F22BBDE8A00C499A3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				980E742022BBDE9400C499A3 /* Keyboard */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		980E742022BBDE9400C499A3 /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				980E742222BBDEC400C499A3 /* Player.hpp */,
+				980E742122BBDEC400C499A3 /* Player.cpp */,
+				980E742522BBDECF00C499A3 /* Game.hpp */,
+				980E742422BBDECF00C499A3 /* Game.cpp */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
 		986BE2FF22BAA0F000B3A18D /* Player */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +167,8 @@
 				986BE30022BAA10200B3A18D /* Player.cpp */,
 				980E741B22BBDCFD00C499A3 /* PlayerControls.hpp */,
 				980E741A22BBDCFD00C499A3 /* PlayerControls.cpp */,
+				980E742822BBE12900C499A3 /* PlayerMoveType.hpp */,
+				980E742722BBE12900C499A3 /* PlayerMoveType.cpp */,
 			);
 			path = Player;
 			sourceTree = "<group>";
@@ -253,10 +294,8 @@
 		98EDD6B322B663E200942A49 /* Controls */ = {
 			isa = PBXGroup;
 			children = (
-				98EDD6B522B6640F00942A49 /* ConfigLoader.hpp */,
-				98EDD6B422B6640F00942A49 /* ConfigLoader.cpp */,
-				98CABB5722B66A4300698549 /* ConfigParser.hpp */,
-				98CABB5622B66A4300698549 /* ConfigParser.cpp */,
+				980E741D22BBDDF200C499A3 /* Config */,
+				980E741F22BBDE8A00C499A3 /* Controller */,
 				98EDD6B822B6648600942A49 /* Config.hpp */,
 				98EDD6B722B6648600942A49 /* Config.cpp */,
 				98F07B0122BABCA900134E17 /* PlayerController.hpp */,
@@ -357,11 +396,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */,
-				98EDD6B622B6640F00942A49 /* ConfigLoader.cpp in Sources */,
+				98EDD6B622B6640F00942A49 /* Loader.cpp in Sources */,
 				986BE2F822BA9E9600B3A18D /* GameState.cpp in Sources */,
-				98CABB5822B66A4300698549 /* ConfigParser.cpp in Sources */,
+				98CABB5822B66A4300698549 /* Parser.cpp in Sources */,
 				98B731C022B955A20020AFD5 /* AssetNotFound.cpp in Sources */,
 				986BE2FB22BA9EB200B3A18D /* GameLoop.cpp in Sources */,
+				980E742322BBDEC400C499A3 /* Player.cpp in Sources */,
 				986BE30622BAA16C00B3A18D /* Level.cpp in Sources */,
 				98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */,
 				98B731BD22B94E980020AFD5 /* AssetManager.cpp in Sources */,
@@ -373,9 +413,11 @@
 				98F07AFC22BAB29900134E17 /* LevelManager.cpp in Sources */,
 				986BE2FE22BA9FFF00B3A18D /* GameRenderer.cpp in Sources */,
 				980E741922BBDCE500C499A3 /* GameControls.cpp in Sources */,
+				980E742622BBDECF00C499A3 /* Game.cpp in Sources */,
 				98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */,
 				986BE2F522BA9E6E00B3A18D /* Game.cpp in Sources */,
 				98F07AFF22BAB8A500134E17 /* CurrentLevel.cpp in Sources */,
+				980E742922BBE12900C499A3 /* PlayerMoveType.cpp in Sources */,
 				980E741C22BBDCFD00C499A3 /* PlayerControls.cpp in Sources */,
 				986BE30922BAA18700B3A18D /* LevelLoader.cpp in Sources */,
 			);

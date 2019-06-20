@@ -3,7 +3,7 @@
 
 #include "Application.hpp"
 #include "Letterbox.hpp"
-#include "../Controls/ConfigLoader.hpp"
+#include "../Controls/Config/Loader.hpp"
 #include "../Controls/Config.hpp"
 
 class ApplicationFactory {

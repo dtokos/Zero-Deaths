@@ -1,4 +1,4 @@
-#include "ConfigLoader.hpp"
+#include "Loader.hpp"
 
 ConfigLoader::ConfigLoader() {
 	

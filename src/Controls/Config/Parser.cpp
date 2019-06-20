@@ -1,4 +1,4 @@
-#include "ConfigParser.hpp"
+#include "Parser.hpp"
 
 #define LEFT_KEY "LEFT"
 #define RIGHT_KEY "RIGHT"
