@@ -6,6 +6,10 @@ GameLoop::GameLoop(Player* player, CurrentLevel* level) :
 	
 }
 
+void GameLoop::handleInputs() {
+	
+}
+
 void GameLoop::update(const float& deltaTime) {
 	this->applyGravity();
 	this->updateX(deltaTime);

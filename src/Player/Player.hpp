@@ -9,7 +9,7 @@ public:
 	Player();
 	bool isDead();
 	bool isAlive();
-	void draw(sf::RenderWindow& window);
+	void draw(const sf::RenderWindow& window);
 	
 
 private:

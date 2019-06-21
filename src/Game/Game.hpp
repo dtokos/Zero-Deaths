@@ -9,15 +9,15 @@
 class Game {
 	
 public:
-	Game(GameState* gameState, GameLoop* gameLoop, GameRenderer* gameRenderer);
+	Game(GameState* state, GameLoop* loop, GameRenderer* renderer);
 	void handleInputs();
 	void update(const float& deltaTime);
 	void draw(const sf::RenderWindow& window);
 	
 private:
-	GameState* gameState;
-	GameLoop* gameLoop;
-	GameRenderer* gameRenderer;
+	GameState* state;
+	GameLoop* loop;
+	GameRenderer* renderer;
 	
 };
 

@@ -8,6 +8,7 @@ class GameLoop {
 	
 public:
 	GameLoop(Player* player, CurrentLevel* level);
+	void handleInputs();
 	void update(const float& deltaTime);
 	
 private:

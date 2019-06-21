@@ -9,7 +9,7 @@ class GameRenderer {
 
 public:
 	GameRenderer(Player* player, CurrentLevel* level);
-	void draw(sf::RenderWindow& window);
+	void draw(const sf::RenderWindow& window);
 	
 private:
 	Player* player;

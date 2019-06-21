@@ -13,6 +13,6 @@ bool Player::isAlive() {
 	return this->alive;
 }
 
-void Player::draw(sf::RenderWindow& window) {
+void Player::draw(const sf::RenderWindow& window) {
 	
 }

@@ -4,6 +4,6 @@ Level::Level() {
 	
 }
 
-void Level::draw(sf::RenderWindow& window) {
+void Level::draw(const sf::RenderWindow& window) {
 	
 }

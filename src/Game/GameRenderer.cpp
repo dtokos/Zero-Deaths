@@ -6,7 +6,7 @@ GameRenderer::GameRenderer(Player* player, CurrentLevel* level) :
 	
 }
 
-void GameRenderer::draw(sf::RenderWindow& window) {
+void GameRenderer::draw(const sf::RenderWindow& window) {
 	this->player->draw(window);
 	this->level->current()->draw(window);
 }

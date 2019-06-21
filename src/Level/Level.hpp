@@ -7,7 +7,7 @@ class Level {
 
 public:
 	Level();
-	void draw(sf::RenderWindow& window);
+	void draw(const sf::RenderWindow& window);
 	
 };
 
