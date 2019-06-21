@@ -1,13 +1,14 @@
 #include "GameLoop.hpp"
 
-GameLoop::GameLoop(Player* player, CurrentLevel* level) :
+GameLoop::GameLoop(Player* player, CurrentLevel* level, PlayerController* playerController) :
 	player(player),
-	level(level) {
+	level(level),
+	playerController(playerController) {
 	
 }
 
 void GameLoop::handleInputs() {
-	
+	this->playerController->apply(*this->player);
 }
 
 void GameLoop::update(const float& deltaTime) {

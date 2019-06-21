@@ -11,7 +11,7 @@
 #define CONFIG_NAME "bindings.cfg"
 
 ApplicationFactory::ApplicationFactory() :
-	gameFactory(GameFactory()) {
+	gameFactory(this->makeGameFactory()) {
 	
 }
 
@@ -58,4 +58,11 @@ Config* ApplicationFactory::loadConfig() {
 	delete userConfig;
 	
 	return defaultConfig;
+}
+
+GameFactory ApplicationFactory::makeGameFactory() {
+	Config* config = this->loadConfig();
+	ControllerFactory* controllerFactory = new KeyboardControllerFactory(config);
+	
+	return GameFactory(controllerFactory);
 }

@@ -4,7 +4,7 @@
 class GameControls {
 
 public:
-	virtual void restart();
+	virtual void restart() = 0;
 	
 };
 

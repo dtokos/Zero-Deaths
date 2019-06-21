@@ -6,8 +6,8 @@
 class PlayerControls {
 	
 public:
-	virtual void move(const PlayerMoveType& type);
-	virtual void jump();
+	virtual void move(const PlayerMoveType& type) = 0;
+	virtual void jump() = 0;
 	
 };
 

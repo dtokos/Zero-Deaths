@@ -16,8 +16,8 @@ private:
 	Config* config;
 	bool isKeyPressed(const sf::Keyboard::Key& key);
 	PlayerMoveType getMoveType();
-	unsigned char calculateMoveType();
-	PlayerMoveType convertMoveType(unsigned char moveType);
+	char calculateMoveType();
+	PlayerMoveType convertMoveType(char moveType);
 	
 };
 

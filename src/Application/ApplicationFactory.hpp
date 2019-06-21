@@ -6,6 +6,7 @@
 #include "../Controls/Config/Loader.hpp"
 #include "../Controls/Config.hpp"
 #include "../Game/GameFactory.hpp"
+#include "../Controls/Controller/Keyboard/Factory.hpp"
 
 class ApplicationFactory {
 	
@@ -21,6 +22,7 @@ private:
 	Letterbox* makeLetterbox(sf::View* view);
 	Config* defaultConfig();
 	Config* loadConfig();
+	GameFactory makeGameFactory();
 	
 };
 

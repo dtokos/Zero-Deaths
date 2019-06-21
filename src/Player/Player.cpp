@@ -16,3 +16,11 @@ bool Player::isAlive() {
 void Player::draw(const sf::RenderWindow& window) {
 	
 }
+
+void Player::move(const PlayerMoveType& type) {
+	
+}
+
+void Player::jump() {
+	
+}

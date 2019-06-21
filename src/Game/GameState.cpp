@@ -2,10 +2,15 @@
 
 #define FIRST_LEVEL 1
 
-GameState::GameState(Player* player, LevelManager* levelManager) :
+GameState::GameState(Player* player, LevelManager* levelManager, GameController* controller) :
 	player(player),
-	levelManager(levelManager) {
+	levelManager(levelManager),
+	controller(controller) {
 	
+}
+
+void GameState::handleInputs() {
+	this->controller->apply(*this);
 }
 
 void GameState::restart() {

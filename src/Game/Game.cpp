@@ -8,6 +8,7 @@ Game::Game(GameState* state, GameLoop* loop, GameRenderer* renderer) :
 }
 
 void Game::handleInputs() {
+	this->state->handleInputs();
 	this->loop->handleInputs();
 }
 

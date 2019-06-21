@@ -22,7 +22,7 @@ PlayerMoveType PlayerKeyboardController::getMoveType() {
 	return this->convertMoveType(moveType);
 }
 
-unsigned char PlayerKeyboardController::calculateMoveType() {
+char PlayerKeyboardController::calculateMoveType() {
 	return (
 		0 +
 		this->isKeyPressed(this->config->right()) -
@@ -30,7 +30,7 @@ unsigned char PlayerKeyboardController::calculateMoveType() {
 	);
 }
 
-PlayerMoveType PlayerKeyboardController::convertMoveType(unsigned char moveType) {
+PlayerMoveType PlayerKeyboardController::convertMoveType(char moveType) {
 	switch (moveType) {
 		case -1:
 			return PlayerMoveType::left;
