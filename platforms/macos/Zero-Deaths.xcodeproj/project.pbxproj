@@ -14,6 +14,7 @@
 		980E742922BBE12900C499A3 /* PlayerMoveType.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 980E742722BBE12900C499A3 /* PlayerMoveType.cpp */; };
 		984C433C22BD1F390018CABD /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984C433A22BD1F390018CABD /* Factory.cpp */; };
 		984C433F22BD201D0018CABD /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984C433D22BD201D0018CABD /* Factory.cpp */; };
+		984C434322BD30110018CABD /* GameFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984C434122BD30110018CABD /* GameFactory.cpp */; };
 		986BE2F522BA9E6E00B3A18D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F322BA9E6E00B3A18D /* Game.cpp */; };
 		986BE2F822BA9E9600B3A18D /* GameState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F622BA9E9600B3A18D /* GameState.cpp */; };
 		986BE2FB22BA9EB200B3A18D /* GameLoop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F922BA9EB200B3A18D /* GameLoop.cpp */; };
@@ -73,6 +74,8 @@
 		984C433B22BD1F390018CABD /* Factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
 		984C433D22BD201D0018CABD /* Factory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Factory.cpp; sourceTree = "<group>"; };
 		984C433E22BD201D0018CABD /* Factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
+		984C434122BD30110018CABD /* GameFactory.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameFactory.cpp; sourceTree = "<group>"; };
+		984C434222BD30110018CABD /* GameFactory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = GameFactory.hpp; sourceTree = "<group>"; };
 		986BE2F322BA9E6E00B3A18D /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		986BE2F422BA9E6E00B3A18D /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
 		986BE2F622BA9E9600B3A18D /* GameState.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = GameState.cpp; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 				986BE2FC22BA9FFF00B3A18D /* GameRenderer.cpp */,
 				980E741822BBDCE500C499A3 /* GameControls.hpp */,
 				980E741722BBDCE500C499A3 /* GameControls.cpp */,
+				984C434222BD30110018CABD /* GameFactory.hpp */,
+				984C434122BD30110018CABD /* GameFactory.cpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -415,6 +420,7 @@
 				986BE30622BAA16C00B3A18D /* Level.cpp in Sources */,
 				98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */,
 				98B731BD22B94E980020AFD5 /* AssetManager.cpp in Sources */,
+				984C434322BD30110018CABD /* GameFactory.cpp in Sources */,
 				986BE30222BAA10200B3A18D /* Player.cpp in Sources */,
 				984C433F22BD201D0018CABD /* Factory.cpp in Sources */,
 				98EDD6B922B6648600942A49 /* Config.cpp in Sources */,
