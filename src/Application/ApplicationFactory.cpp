@@ -10,7 +10,8 @@
 
 #define CONFIG_NAME "bindings.cfg"
 
-ApplicationFactory::ApplicationFactory() {
+ApplicationFactory::ApplicationFactory() :
+	gameFactory(GameFactory()) {
 	
 }
 
@@ -18,7 +19,7 @@ Application ApplicationFactory::make() {
 	sf::RenderWindow* window = this->makeWindow();
 	sf::View* view = this->makeView();
 	Letterbox* letterbox = this->makeLetterbox(view);
-	Game* game = this->makeGame();
+	Game* game = this->gameFactory.makeGame();
 	
 	return Application(window, view, letterbox, game);
 }
@@ -57,15 +58,4 @@ Config* ApplicationFactory::loadConfig() {
 	delete userConfig;
 	
 	return defaultConfig;
-}
-
-Game* ApplicationFactory::makeGame() {
-	Player* player = new Player();
-	LevelLoader* levelLoader = new LevelLoader();
-	LevelManager* levelManager = new LevelManager(levelLoader);
-	GameState* gameState = new GameState(player, levelManager);
-	GameLoop* gameLoop = new GameLoop(player, levelManager);
-	GameRenderer* gameRenderer = new GameRenderer(player, levelManager);
-	
-	return new Game(gameState, gameLoop, gameRenderer);
 }
