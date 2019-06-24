@@ -1,7 +1,7 @@
 #include "Stopwatch.hpp"
 
-Stopwatch::Stopwatch(sf::Font& font) :
-	text(sf::Text("", font, 30)),
+Stopwatch::Stopwatch(sf::Font& font, int fontSize) :
+	text(sf::Text("", font, fontSize)),
 	miliSeconds(0),
 	seconds(0),
 	minutes(0),
@@ -52,4 +52,12 @@ void Stopwatch::appendString(const std::string& string) {
 
 void Stopwatch::clearTextStream() {
 	this->textStream.str("");
+}
+
+sf::FloatRect Stopwatch::getBounds() {
+	return this->text.getLocalBounds();
+}
+
+void Stopwatch::setPosition(float x, float y) {
+	this->text.setPosition(x, y);
 }

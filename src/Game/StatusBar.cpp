@@ -1,9 +1,12 @@
 #include "StatusBar.hpp"
 
-StatusBar::StatusBar(sf::Font& font, int maxLevel) :
-	levelInfo(LevelInfo(font, maxLevel)),
-	stats(Stats(font)),
-	stopwatch(Stopwatch(font)) {
+#define MARGIN 8
+
+StatusBar::StatusBar(sf::Font& font, int fontSize, int maxLevel, sf::FloatRect bounds) :
+	levelInfo(LevelInfo(font, fontSize, maxLevel)),
+	stats(Stats(font, fontSize)),
+	stopwatch(Stopwatch(font, fontSize)),
+	bounds(bounds) {
 	
 }
 
@@ -17,4 +20,43 @@ void StatusBar::setLevel(const int& levelNumber) {
 
 void StatusBar::setRestarts(const int& restarts) {
 	this->stats.setRestarts(restarts);
+}
+
+void StatusBar::draw(sf::RenderWindow& window) {
+	this->alignLevelInfo();
+	this->levelInfo.draw(window);
+	
+	this->alignStats();
+	this->stats.draw(window);
+	
+	this->alignStopwatch();
+	this->stopwatch.draw(window);
+}
+
+void StatusBar::alignLevelInfo() {
+	this->levelInfo.setPosition(this->leftMargin(), this->bounds.top);
+}
+
+void StatusBar::alignStats() {
+	sf::FloatRect statsBounds = this->stats.getBounds();
+	
+	this->stats.setPosition(this->centerX() - statsBounds.width/2, this->bounds.top);
+}
+
+void StatusBar::alignStopwatch() {
+	sf::FloatRect stopwatchBounds = this->stopwatch.getBounds();
+	
+	this->stopwatch.setPosition(this->rightMargin() - stopwatchBounds.width, this->bounds.top);
+}
+
+float StatusBar::leftMargin() {
+	return this->bounds.left + MARGIN;
+}
+
+float StatusBar::centerX() {
+	return this->bounds.left + this->bounds.width/2;
+}
+
+float StatusBar::rightMargin() {
+	return this->bounds.left + this->bounds.width - MARGIN;
 }

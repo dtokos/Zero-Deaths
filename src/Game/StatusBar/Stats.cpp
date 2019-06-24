@@ -1,7 +1,7 @@
 #include "Stats.hpp"
 
-Stats::Stats(sf::Font& font) :
-	text(sf::Text("", font, 30)),
+Stats::Stats(sf::Font& font, int fontSize) :
+	text(sf::Text("", font, fontSize)),
 	textStream(std::stringstream()) {
 	
 }
@@ -15,4 +15,16 @@ void Stats::setRestarts(const int& restarts) {
 
 void Stats::clearTextStream() {
 	this->textStream.str("");
+}
+
+void Stats::draw(sf::RenderWindow& window) {
+	window.draw(this->text);
+}
+
+sf::FloatRect Stats::getBounds() {
+	return this->text.getLocalBounds();
+}
+
+void Stats::setPosition(float x, float y) {
+	this->text.setPosition(x, y);
 }

@@ -10,9 +10,11 @@
 class Stopwatch {
 	
 public:
-	Stopwatch(sf::Font& font);
+	Stopwatch(sf::Font& font, int fontSize);
 	void update(const float& deltaTime);
 	void draw(sf::RenderWindow& window);
+	sf::FloatRect getBounds();
+	void setPosition(float x, float y);
 	
 private:
 	sf::Text text;
