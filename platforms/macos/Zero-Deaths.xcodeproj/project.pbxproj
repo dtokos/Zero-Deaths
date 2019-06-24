@@ -22,6 +22,10 @@
 		986BE30222BAA10200B3A18D /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE30022BAA10200B3A18D /* Player.cpp */; };
 		986BE30622BAA16C00B3A18D /* Level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE30422BAA16C00B3A18D /* Level.cpp */; };
 		986BE30922BAA18700B3A18D /* LevelLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE30722BAA18700B3A18D /* LevelLoader.cpp */; };
+		98A4488922C11F6C008E56C9 /* StatusBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4488722C11F6C008E56C9 /* StatusBar.cpp */; };
+		98A4488D22C11FB7008E56C9 /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4488B22C11FB7008E56C9 /* Stopwatch.cpp */; };
+		98A4489022C12022008E56C9 /* LevelInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4488E22C12022008E56C9 /* LevelInfo.cpp */; };
+		98A4489322C1205A008E56C9 /* Stats.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4489122C1205A008E56C9 /* Stats.cpp */; };
 		98B731BD22B94E980020AFD5 /* AssetManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B731BB22B94E980020AFD5 /* AssetManager.cpp */; };
 		98B731C022B955A20020AFD5 /* AssetNotFound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98B731BE22B955A20020AFD5 /* AssetNotFound.cpp */; };
 		98C49A7222B5514700084A65 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A6F22B5514700084A65 /* libsfml-window.2.5.1.dylib */; };
@@ -90,6 +94,14 @@
 		986BE30522BAA16C00B3A18D /* Level.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Level.hpp; sourceTree = "<group>"; };
 		986BE30722BAA18700B3A18D /* LevelLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelLoader.cpp; sourceTree = "<group>"; };
 		986BE30822BAA18700B3A18D /* LevelLoader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LevelLoader.hpp; sourceTree = "<group>"; };
+		98A4488722C11F6C008E56C9 /* StatusBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StatusBar.cpp; sourceTree = "<group>"; };
+		98A4488822C11F6C008E56C9 /* StatusBar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StatusBar.hpp; sourceTree = "<group>"; };
+		98A4488B22C11FB7008E56C9 /* Stopwatch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stopwatch.cpp; sourceTree = "<group>"; };
+		98A4488C22C11FB7008E56C9 /* Stopwatch.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stopwatch.hpp; sourceTree = "<group>"; };
+		98A4488E22C12022008E56C9 /* LevelInfo.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LevelInfo.cpp; sourceTree = "<group>"; };
+		98A4488F22C12022008E56C9 /* LevelInfo.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LevelInfo.hpp; sourceTree = "<group>"; };
+		98A4489122C1205A008E56C9 /* Stats.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stats.cpp; sourceTree = "<group>"; };
+		98A4489222C1205A008E56C9 /* Stats.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Stats.hpp; sourceTree = "<group>"; };
 		98B731BB22B94E980020AFD5 /* AssetManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetManager.cpp; sourceTree = "<group>"; };
 		98B731BC22B94E980020AFD5 /* AssetManager.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AssetManager.hpp; sourceTree = "<group>"; };
 		98B731BE22B955A20020AFD5 /* AssetNotFound.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AssetNotFound.cpp; sourceTree = "<group>"; };
@@ -201,6 +213,19 @@
 			path = Level;
 			sourceTree = "<group>";
 		};
+		98A4488A22C11FA5008E56C9 /* StatusBar */ = {
+			isa = PBXGroup;
+			children = (
+				98A4488F22C12022008E56C9 /* LevelInfo.hpp */,
+				98A4488E22C12022008E56C9 /* LevelInfo.cpp */,
+				98A4489222C1205A008E56C9 /* Stats.hpp */,
+				98A4489122C1205A008E56C9 /* Stats.cpp */,
+				98A4488C22C11FB7008E56C9 /* Stopwatch.hpp */,
+				98A4488B22C11FB7008E56C9 /* Stopwatch.cpp */,
+			);
+			path = StatusBar;
+			sourceTree = "<group>";
+		};
 		98B731BA22B94E890020AFD5 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +315,7 @@
 		98EDD6B222B663A900942A49 /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				98A4488A22C11FA5008E56C9 /* StatusBar */,
 				986BE2F422BA9E6E00B3A18D /* Game.hpp */,
 				986BE2F322BA9E6E00B3A18D /* Game.cpp */,
 				986BE2F722BA9E9600B3A18D /* GameState.hpp */,
@@ -302,6 +328,8 @@
 				980E741722BBDCE500C499A3 /* GameControls.cpp */,
 				984C434222BD30110018CABD /* GameFactory.hpp */,
 				984C434122BD30110018CABD /* GameFactory.cpp */,
+				98A4488822C11F6C008E56C9 /* StatusBar.hpp */,
+				98A4488722C11F6C008E56C9 /* StatusBar.cpp */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -419,12 +447,15 @@
 				980E742322BBDEC400C499A3 /* Player.cpp in Sources */,
 				986BE30622BAA16C00B3A18D /* Level.cpp in Sources */,
 				98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */,
+				98A4489322C1205A008E56C9 /* Stats.cpp in Sources */,
 				98B731BD22B94E980020AFD5 /* AssetManager.cpp in Sources */,
 				984C434322BD30110018CABD /* GameFactory.cpp in Sources */,
 				986BE30222BAA10200B3A18D /* Player.cpp in Sources */,
 				984C433F22BD201D0018CABD /* Factory.cpp in Sources */,
+				98A4489022C12022008E56C9 /* LevelInfo.cpp in Sources */,
 				98EDD6B922B6648600942A49 /* Config.cpp in Sources */,
 				98EDD6B022B63B5200942A49 /* main.cpp in Sources */,
+				98A4488D22C11FB7008E56C9 /* Stopwatch.cpp in Sources */,
 				98F07B0522BABCB600134E17 /* GameController.cpp in Sources */,
 				98F07B0222BABCA900134E17 /* PlayerController.cpp in Sources */,
 				98F07AFC22BAB29900134E17 /* LevelManager.cpp in Sources */,
@@ -438,6 +469,7 @@
 				980E742922BBE12900C499A3 /* PlayerMoveType.cpp in Sources */,
 				980E741C22BBDCFD00C499A3 /* PlayerControls.cpp in Sources */,
 				986BE30922BAA18700B3A18D /* LevelLoader.cpp in Sources */,
+				98A4488922C11F6C008E56C9 /* StatusBar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
