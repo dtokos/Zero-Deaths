@@ -2,9 +2,9 @@
 #define Game_hpp
 
 #include <SFML/Graphics/RenderWindow.hpp>
-#include "GameState.hpp"
-#include "GameLoop.hpp"
-#include "GameRenderer.hpp"
+#include "./State.hpp"
+#include "./Loop.hpp"
+#include "./Renderer.hpp"
 
 class Game {
 	

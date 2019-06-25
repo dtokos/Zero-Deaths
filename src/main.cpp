@@ -1,4 +1,3 @@
-#include "Application/Application.hpp"
 #include "Application/ApplicationFactory.hpp"
 
 int main(int argc, const char* argv[]) {

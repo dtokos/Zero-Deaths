@@ -1,7 +1,7 @@
 #include "Stopwatch.hpp"
 
 Stopwatch::Stopwatch(sf::Font& font, int fontSize) :
-	text(sf::Text("", font, fontSize)),
+	text("", font, fontSize),
 	miliSeconds(0),
 	seconds(0),
 	minutes(0),

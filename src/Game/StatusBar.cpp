@@ -2,10 +2,10 @@
 
 #define MARGIN 8
 
-StatusBar::StatusBar(sf::Font& font, int fontSize, int maxLevel, sf::FloatRect bounds) :
-	levelInfo(LevelInfo(font, fontSize, maxLevel)),
-	stats(Stats(font, fontSize)),
-	stopwatch(Stopwatch(font, fontSize)),
+StatusBar::StatusBar(sf::Font& font, int maxLevel, sf::FloatRect bounds) :
+	levelInfo(font, bounds.height, maxLevel),
+	stats(font, bounds.height),
+	stopwatch(font, bounds.height),
 	bounds(bounds) {
 	
 }

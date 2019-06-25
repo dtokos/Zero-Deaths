@@ -1,7 +1,7 @@
 #include "LevelInfo.hpp"
 
 LevelInfo::LevelInfo(sf::Font& font, int fontSize, int maxLevel) :
-	text(sf::Text("", font, fontSize)),
+	text("", font, fontSize),
 	textStream(std::stringstream()),
 	maxLevel(maxLevel) {
 	

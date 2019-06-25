@@ -1,7 +1,7 @@
 #include "Stats.hpp"
 
 Stats::Stats(sf::Font& font, int fontSize) :
-	text(sf::Text("", font, fontSize)),
+	text("", font, fontSize),
 	textStream(std::stringstream()) {
 	
 }

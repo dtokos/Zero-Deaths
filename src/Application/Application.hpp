@@ -3,8 +3,8 @@
 
 #include <algorithm>
 #include <SFML/Graphics.hpp>
-#include "Letterbox.hpp"
-#include "../Game/Game.hpp"
+#include "Game/Game.hpp"
+#include "./Letterbox.hpp"
 
 class Application {
 

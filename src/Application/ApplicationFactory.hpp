@@ -1,12 +1,11 @@
 #ifndef ApplicationFactory_hpp
 #define ApplicationFactory_hpp
 
-#include "Application.hpp"
-#include "Letterbox.hpp"
-#include "../Controls/Config/Loader.hpp"
-#include "../Controls/Config.hpp"
-#include "../Game/GameFactory.hpp"
-#include "../Controls/Controller/Keyboard/Factory.hpp"
+#include "./Application.hpp"
+#include "./Letterbox.hpp"
+#include "Game/Factory.hpp"
+#include "Controllers/Keyboard/Config/Loader.hpp"
+#include "Controllers/Keyboard/Factory.hpp"
 
 class ApplicationFactory {
 	
@@ -20,8 +19,8 @@ private:
 	sf::RenderWindow* makeWindow();
 	sf::View* makeView();
 	Letterbox* makeLetterbox(sf::View* view);
-	Config* defaultConfig();
-	Config* loadConfig();
+	KeyboardConfig* defaultConfig();
+	KeyboardConfig* loadConfig();
 	GameFactory makeGameFactory();
 	
 };

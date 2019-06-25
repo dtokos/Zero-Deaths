@@ -44,14 +44,14 @@ Letterbox* ApplicationFactory::makeLetterbox(sf::View* view) {
 	return new Letterbox(view, WINDOW_RATIO);
 }
 
-Config* ApplicationFactory::defaultConfig() {
-	return new Config(sf::Keyboard::Key::Right, sf::Keyboard::Key::Left, sf::Keyboard::Key::Up, sf::Keyboard::Key::R);
+KeyboardConfig* ApplicationFactory::defaultConfig() {
+	return new KeyboardConfig(sf::Keyboard::Key::Right, sf::Keyboard::Key::Left, sf::Keyboard::Key::Up, sf::Keyboard::Key::R);
 };
 
-Config* ApplicationFactory::loadConfig() {
-	ConfigLoader loader;
-	Config* defaultConfig = this->defaultConfig();
-	Config* userConfig = loader.load(CONFIG_NAME);
+KeyboardConfig* ApplicationFactory::loadConfig() {
+	KeyboardConfigLoader loader;
+	KeyboardConfig* defaultConfig = this->defaultConfig();
+	KeyboardConfig* userConfig = loader.load(CONFIG_NAME);
 	
 	defaultConfig->merge(*userConfig);
 	
@@ -61,7 +61,7 @@ Config* ApplicationFactory::loadConfig() {
 }
 
 GameFactory ApplicationFactory::makeGameFactory() {
-	Config* config = this->loadConfig();
+	KeyboardConfig* config = this->loadConfig();
 	ControllerFactory* controllerFactory = new KeyboardControllerFactory(config);
 	
 	return GameFactory(controllerFactory);
