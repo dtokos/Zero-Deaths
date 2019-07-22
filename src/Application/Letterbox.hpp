@@ -16,7 +16,6 @@ private:
 	sf::FloatRect calculateViewport(float currentWidth, float currentHeight);
 	float calculateSizeRatio(float width, float height);
 	bool shouldAddHorizontalSpacing(float currentSizeRatio);
-	float calculateSize(float currentSizeRatio);
 	float calculatePosition(float currentSize);
 };
 
