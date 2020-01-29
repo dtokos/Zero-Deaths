@@ -4,6 +4,7 @@
 #include "./Application.hpp"
 #include "./Letterbox.hpp"
 #include "Game/Factory.hpp"
+#include "Assets/AssetManager.hpp"
 #include "Controllers/Keyboard/Config/Loader.hpp"
 #include "Controllers/Keyboard/Factory.hpp"
 

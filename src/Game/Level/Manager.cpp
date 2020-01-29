@@ -2,8 +2,8 @@
 
 LevelManager::LevelManager(LevelLoader* levelLoader) :
 	levelLoader(levelLoader),
-	currentLevelNumber(1),
-	lastLevelNumber(30) {
+	lastLevelNumber(33),
+	currentLevel(NULL) {
 	
 }
 
@@ -11,22 +11,25 @@ Level* LevelManager::current() {
 	return this->currentLevel;
 }
 
-int LevelManager::currentNumber() {
-	return this->currentLevelNumber;
-}
-
 void LevelManager::loadNextLevel() {
-	this->currentLevelNumber++;
-	
 	if (!this->didFinishAllLevels())
-		this->loadLevel(this->currentLevelNumber);
+		this->loadLevel(this->nextLevelNumber());
 }
 
 void LevelManager::loadLevel(const int& levelNumber) {
-	delete this->currentLevel;
+	if (this->currentLevel != NULL)
+		delete this->currentLevel;
 	this->currentLevel = this->levelLoader->load(levelNumber);
 }
 
 bool LevelManager::didFinishAllLevels() {
-	return this->currentLevelNumber > this->lastLevelNumber;
+	return this->currentLevelNumber() > this->lastLevelNumber;
+}
+
+int LevelManager::currentLevelNumber() {
+	return this->currentLevel->number();
+}
+
+int LevelManager::nextLevelNumber() {
+	return this->currentLevelNumber() + 1;
 }

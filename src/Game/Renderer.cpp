@@ -1,12 +1,14 @@
 #include "Renderer.hpp"
 
-GameRenderer::GameRenderer(Player* player, CurrentLevel* level) :
+GameRenderer::GameRenderer(Player* player, CurrentLevel* level, StatusBar* statusBar) :
 	player(player),
-	level(level) {
+	level(level),
+	statusBar(statusBar) {
 	
 }
 
-void GameRenderer::draw(const sf::RenderWindow& window) {
-	this->player->draw(window);
+void GameRenderer::draw(sf::RenderWindow& window) {
 	this->level->current()->draw(window);
+	this->player->draw(window);
+	this->statusBar->draw(window);
 }

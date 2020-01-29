@@ -17,6 +17,6 @@ void Game::update(const float& deltaTime) {
 	this->state->update();
 }
 
-void Game::draw(const sf::RenderWindow& window) {
+void Game::draw(sf::RenderWindow& window) {
 	this->renderer->draw(window);
 }

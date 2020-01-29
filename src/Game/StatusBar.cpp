@@ -3,33 +3,31 @@
 #define MARGIN 8
 
 StatusBar::StatusBar(sf::Font& font, int maxLevel, sf::FloatRect bounds) :
-	levelInfo(font, bounds.height, maxLevel),
-	stats(font, bounds.height),
-	stopwatch(font, bounds.height),
+	levelInfo(font, 30, maxLevel),
+	stats(font, 30),
+	stopwatch(font, 30),
 	bounds(bounds) {
-	
+		
 }
 
 void StatusBar::update(const float& deltaTime) {
 	this->stopwatch.update(deltaTime);
+	this->alignStopwatch();
 }
 
 void StatusBar::setLevel(const int& levelNumber) {
 	this->levelInfo.setLevel(levelNumber);
+	this->alignLevelInfo();
 }
 
 void StatusBar::setRestarts(const int& restarts) {
 	this->stats.setRestarts(restarts);
+	this->alignStats();
 }
 
 void StatusBar::draw(sf::RenderWindow& window) {
-	this->alignLevelInfo();
 	this->levelInfo.draw(window);
-	
-	this->alignStats();
 	this->stats.draw(window);
-	
-	this->alignStopwatch();
 	this->stopwatch.draw(window);
 }
 

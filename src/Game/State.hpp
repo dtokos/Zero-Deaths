@@ -18,9 +18,10 @@ private:
 	LevelManager* levelManager;
 	GameController* controller;
 	
-	
 	bool isInFinish();
+	void loadLevel(int levelNumber);
 	void loadNextLevel();
+	void spawnPlayer();
 	
 };
 

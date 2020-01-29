@@ -64,5 +64,5 @@ GameFactory ApplicationFactory::makeGameFactory() {
 	KeyboardConfig* config = this->loadConfig();
 	ControllerFactory* controllerFactory = new KeyboardControllerFactory(config);
 	
-	return GameFactory(controllerFactory);
+	return GameFactory(controllerFactory, new AssetManager());
 }

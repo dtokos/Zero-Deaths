@@ -4,16 +4,18 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 #include "./Player/Player.hpp"
 #include "./Level/Current.hpp"
+#include "./StatusBar.hpp"
 
 class GameRenderer {
 
 public:
-	GameRenderer(Player* player, CurrentLevel* level);
-	void draw(const sf::RenderWindow& window);
+	GameRenderer(Player* player, CurrentLevel* level, StatusBar* statusBar);
+	void draw(sf::RenderWindow& window);
 	
 private:
 	Player* player;
 	CurrentLevel* level;
+	StatusBar* statusBar;
 	
 };
 

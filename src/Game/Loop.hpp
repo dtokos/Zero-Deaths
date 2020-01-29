@@ -17,9 +17,10 @@ private:
 	CurrentLevel* level;
 	PlayerController* playerController;
 	
-	void applyGravity();
 	void updateX(const float& deltaTime);
 	void updateY(const float& deltaTime);
+	void collideX();
+	void collideY();
 	
 };
 

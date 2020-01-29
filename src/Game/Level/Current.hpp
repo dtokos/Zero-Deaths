@@ -7,7 +7,6 @@ class CurrentLevel {
 
 public:
 	virtual Level* current() = 0;
-	virtual int currentNumber() = 0;
 	
 };
 
