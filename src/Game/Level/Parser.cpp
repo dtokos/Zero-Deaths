@@ -63,6 +63,7 @@ void LevelParser::parseFinishIndex(std::vector<unsigned char>::const_iterator& d
 }
 
 void LevelParser::parseTiles(std::vector<unsigned char>::const_iterator& dataIterator) {
+	this->tiles.clear();
 	int tileCount = std::get<0>(this->levelSize) * std::get<1>(this->levelSize);
 	
 	for (int i = 0, tileIndex = 0; i < tileCount * TILE_SIZE; i++)

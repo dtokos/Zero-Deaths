@@ -19,6 +19,7 @@ public:
 	void updateX(const float& deltaTime);
 	void updateY(const float& deltaTime, const float& gravity);
 	void setPosition(sf::Vector2f& position);
+	void setVelocityY(const float velocity);
 	sf::FloatRect getColisionBody();
 	
 
@@ -26,8 +27,8 @@ private:
 	sf::Sprite body;
 	bool alive;
 	bool isJumpReady;
-	int movementSpeed;
-	int jumpSpeed;
+	float movementSpeed;
+	float jumpSpeed;
 	sf::Vector2f velocity;
 	PlayerMoveType direction;
 	PlayerAnimation animation;
@@ -35,7 +36,6 @@ private:
 	bool canJump();
 	void applyMovement(const float& deltaTime);
 	void applyXVelocity();
-	void applyYVelocity();
 	void updateAnimation(const float& deltaTime);
 	
 };

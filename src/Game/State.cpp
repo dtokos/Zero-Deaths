@@ -2,10 +2,11 @@
 
 #define FIRST_LEVEL 1
 
-GameState::GameState(Player* player, LevelManager* levelManager, GameController* controller) :
+GameState::GameState(Player* player, LevelManager* levelManager, GameController* controller, StatusBar* statusBar) :
 	player(player),
 	levelManager(levelManager),
-	controller(controller) {
+	controller(controller),
+	statusBar(statusBar) {
 		this->loadLevel(FIRST_LEVEL);
 }
 
@@ -24,17 +25,22 @@ void GameState::update() {
 }
 
 bool GameState::isInFinish() {
+	sf::FloatRect playerBody = this->player->getColisionBody();
+	sf::FloatRect finishBody = this->levelManager->current()->finishTile()->getCollisionBody();
 	
+	return finishBody.contains(playerBody.left + playerBody.width / 2, playerBody.top + playerBody.height / 2);
 }
 
 void GameState::loadLevel(int levelNumber) {
+	this->statusBar->setLevel(levelNumber);
 	this->levelManager->loadLevel(levelNumber);
 	this->spawnPlayer();
 }
 
 void GameState::loadNextLevel() {
+	this->statusBar->setLevel(this->levelManager->currentNumber());
 	this->levelManager->loadNextLevel();
-	// respawn player
+	this->spawnPlayer();
 }
 
 void GameState::spawnPlayer() {
@@ -43,6 +49,4 @@ void GameState::spawnPlayer() {
 	sf::Vector2f position = start->getPosition();
 	
 	this->player->setPosition(position);
-	//sf::Vector2f asd(100, 500);
-	//this->player->setPosition(asd);
 }

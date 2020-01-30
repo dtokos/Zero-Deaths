@@ -23,13 +23,13 @@ void LevelManager::loadLevel(const int& levelNumber) {
 }
 
 bool LevelManager::didFinishAllLevels() {
-	return this->currentLevelNumber() > this->lastLevelNumber;
+	return this->currentNumber() > this->lastLevelNumber;
 }
 
-int LevelManager::currentLevelNumber() {
+int LevelManager::currentNumber() {
 	return this->currentLevel->number();
 }
 
 int LevelManager::nextLevelNumber() {
-	return this->currentLevelNumber() + 1;
+	return this->currentNumber() + 1;
 }

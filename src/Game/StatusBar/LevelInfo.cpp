@@ -8,7 +8,7 @@ LevelInfo::LevelInfo(sf::Font& font, int fontSize, int maxLevel) :
 }
 
 void LevelInfo::setLevel(const int& levelNumber) {
-	this->textStream << "Level " << levelNumber << " " << this->maxLevel;
+	this->textStream << "Level " << levelNumber << " - " << this->maxLevel;
 	
 	this->text.setString(this->textStream.str());
 	this->clearTextStream();

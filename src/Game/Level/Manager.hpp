@@ -9,6 +9,7 @@ class LevelManager : public virtual CurrentLevel {
 public:
 	LevelManager(LevelLoader* levelLoader);
 	virtual Level* current();
+	int currentNumber();
 	void loadNextLevel();
 	void loadLevel(const int& levelNumber);
 	bool didFinishAllLevels();
@@ -18,7 +19,6 @@ private:
 	LevelLoader* levelLoader;
 	Level* currentLevel;
 	
-	int currentLevelNumber();
 	int nextLevelNumber();
 	
 };

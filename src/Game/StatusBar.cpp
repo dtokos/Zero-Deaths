@@ -1,23 +1,23 @@
 #include "StatusBar.hpp"
 
-#define MARGIN 8
+#define MARGIN 16
 
 StatusBar::StatusBar(sf::Font& font, int maxLevel, sf::FloatRect bounds) :
 	levelInfo(font, 30, maxLevel),
 	stats(font, 30),
 	stopwatch(font, 30),
 	bounds(bounds) {
-		
+		this->update(0);
+		this->alignStopwatch();
+		this->alignLevelInfo();
 }
 
 void StatusBar::update(const float& deltaTime) {
 	this->stopwatch.update(deltaTime);
-	this->alignStopwatch();
 }
 
 void StatusBar::setLevel(const int& levelNumber) {
 	this->levelInfo.setLevel(levelNumber);
-	this->alignLevelInfo();
 }
 
 void StatusBar::setRestarts(const int& restarts) {
@@ -43,7 +43,6 @@ void StatusBar::alignStats() {
 
 void StatusBar::alignStopwatch() {
 	sf::FloatRect stopwatchBounds = this->stopwatch.getBounds();
-	
 	this->stopwatch.setPosition(this->rightMargin() - stopwatchBounds.width, this->bounds.top);
 }
 

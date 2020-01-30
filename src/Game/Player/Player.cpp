@@ -4,8 +4,8 @@ Player::Player(sf::Texture& texture) :
 	body(texture, sf::IntRect(0, 38, 38, 38)),
 	alive(true),
 	isJumpReady(true),
-	movementSpeed(520),
-	jumpSpeed(-17.0f),
+	movementSpeed(520.0f),
+	jumpSpeed(-17.85f),
 	velocity(0, 0),
 	direction(PlayerMoveType::none),
 	animation(0.1, 4) {
@@ -29,8 +29,10 @@ void Player::move(const PlayerMoveType& type) {
 }
 
 void Player::jump() {
-	if (this->canJump())
+	if (this->canJump()) {
 		this->velocity.y = this->jumpSpeed;
+		this->isJumpReady = false;
+	}
 }
 
 void Player::respawn() {
@@ -66,10 +68,6 @@ void Player::updateAnimation(const float& deltaTime) {
 	this->body.setTextureRect(textureRect);
 }
 
-void Player::applyYVelocity() {
-	this->body.move(0, this->velocity.y);
-}
-
 void Player::updateY(const float& deltaTime, const float& gravity) {
 	this->velocity.y += deltaTime * gravity;
 	this->body.move(0, this->velocity.y);
@@ -77,6 +75,10 @@ void Player::updateY(const float& deltaTime, const float& gravity) {
 
 void Player::setPosition(sf::Vector2f& position) {
 	this->body.setPosition(position);
+}
+
+void Player::setVelocityY(const float velocity) {
+	this->velocity.y = velocity;
 }
 
 sf::FloatRect Player::getColisionBody() {

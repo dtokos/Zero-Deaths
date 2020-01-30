@@ -10,6 +10,7 @@ public:
 	Tile(sf::Texture& texture, sf::IntRect& bounds, int textureOffset);
 	void draw(sf::RenderWindow& window);
 	sf::Vector2f getPosition();
+	sf::FloatRect getCollisionBody();
 	
 	virtual void collideX(Player &player);
 	virtual void collideY(Player &player);

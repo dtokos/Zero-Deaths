@@ -13,6 +13,10 @@ sf::Vector2f Tile::getPosition() {
 	return this->body.getPosition();
 }
 
+sf::FloatRect Tile::getCollisionBody() {
+	return this->body.getGlobalBounds();
+}
+
 void Tile::collideX(Player &player) {}
 void Tile::collideY(Player &player) {}
 
