@@ -2,12 +2,13 @@
 
 Stats::Stats(sf::Font& font, int fontSize) :
 	text("", font, fontSize),
-	textStream(std::stringstream()) {
-	
+	textStream(std::stringstream()),
+	restarts(-1) {
+		this->incrementRestarts();
 }
 
-void Stats::setRestarts(const int& restarts) {
-	this->textStream << "Deaths: 0         Restarts: " << restarts;
+void Stats::incrementRestarts() {
+	this->textStream << "Deaths: 0         Restarts: " << ++this->restarts;
 	
 	this->text.setString(this->textStream.str());
 	this->clearTextStream();

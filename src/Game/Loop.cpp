@@ -15,13 +15,14 @@ void GameLoop::handleInputs() {
 }
 
 void GameLoop::update(const float& deltaTime) {
-	this->updateX(deltaTime);
-	// check for collisions in X axis
-	this->collideX();
-	this->updateY(deltaTime);
-	this->collideY();
-	// check for collisions in Y axis
-	// handle hazzards
+	if (this->player->isAlive()) {
+		this->updateX(deltaTime);
+		this->collideX();
+		this->updateY(deltaTime);
+		this->collideY();
+		this->handleHazzards();
+	}
+	
 	this->statusBar->update(deltaTime);
 }
 
@@ -52,3 +53,14 @@ void GameLoop::collideY() {
 	currentLevel->tileAt(sf::Vector2f(playerBody.left, playerBody.top + playerBody.height))->collideY(*this->player);
 	currentLevel->tileAt(sf::Vector2f(playerBody.left + playerBody.width, playerBody.top + playerBody.height))->collideY(*this->player);
 }
+
+void GameLoop::handleHazzards() {
+	sf::FloatRect playerBody = this->player->getColisionBody();
+	Level *currentLevel = this->level->current();
+	
+	currentLevel->tileAt(sf::Vector2f(playerBody.left, playerBody.top))->handleHazzards(*this->player);
+	currentLevel->tileAt(sf::Vector2f(playerBody.left + playerBody.width, playerBody.top))->handleHazzards(*this->player);
+	currentLevel->tileAt(sf::Vector2f(playerBody.left, playerBody.top + playerBody.height))->handleHazzards(*this->player);
+	currentLevel->tileAt(sf::Vector2f(playerBody.left + playerBody.width, playerBody.top + playerBody.height))->handleHazzards(*this->player);
+}
+

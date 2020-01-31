@@ -12,6 +12,7 @@ class Stopwatch {
 public:
 	Stopwatch(sf::Font& font, int fontSize);
 	void update(const float& deltaTime);
+	void stop();
 	void draw(sf::RenderWindow& window);
 	sf::FloatRect getBounds();
 	void setPosition(float x, float y);
@@ -22,6 +23,7 @@ private:
 	int seconds;
 	int minutes;
 	int hours;
+	bool isRunning;
 	std::stringstream textStream;
 	
 	void updateTime(const float& deltaTime);

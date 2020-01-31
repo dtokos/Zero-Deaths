@@ -87,35 +87,31 @@ void LevelParser::parseTile(unsigned char tileNumber, int tileIndex) {
 	sf::IntRect bounds(x, y, std::get<0>(this->textureSize), std::get<1>(this->textureSize));
 	
 	switch (tileNumber) {
-		/*case TILE_BACKGROUND:
+		case TILE_BACKGROUND:
 		case TILE_BACKGROUND_WHITE:
 		case TILE_BACKGROUND_WHITE_LEFT:
 		case TILE_BACKGROUND_WHITE_RIGHT:
 		case TILE_BACKGROUND_FINISH:
-			std::cout << "BackgroundTile\n";
-			// add new BackgroundTile
-			break;*/
+			this->tiles.push_back(new Tile(this->tileTexture, bounds, tileNumber));
+			break;
 			
 		case TILE_SOLID:
 			this->tiles.push_back(new SolidTile(this->tileTexture, bounds, tileNumber));
 			break;
 			
-		/*case TILE_SPIKE_TOP:
+		case TILE_SPIKE_TOP:
 		case TILE_SPIKE_LEFT:
 		case TILE_SPIKE_RIGHT:
 		case TILE_SPIKE_BOTTOM:
-			std::cout << "SpikeTile\n";
-			// add new SpikeTile
+			this->tiles.push_back(new SpikeTile(this->tileTexture, bounds, tileNumber));
 			break;
 			
 		case TILE_SPRING:
-			std::cout << "SpringTile\n";
-			// add new SpringTile
-			break;*/
+			this->tiles.push_back(new SpringTile(this->tileTexture, bounds, tileNumber));
+			break;
 			
 		default:
-			this->tiles.push_back(new Tile(this->tileTexture, bounds, tileNumber));
-			//throw LevelParsingException("Unknown tile number");
+			throw LevelParsingException("Unknown tile number");
 	}
 }
 

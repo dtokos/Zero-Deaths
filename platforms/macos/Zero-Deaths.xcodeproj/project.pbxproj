@@ -13,6 +13,8 @@
 		984C433C22BD1F390018CABD /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984C433A22BD1F390018CABD /* Factory.cpp */; };
 		984C434322BD30110018CABD /* Factory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984C434122BD30110018CABD /* Factory.cpp */; };
 		984CE7C922CA6C310028834E /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 984CE7C722CA6C310028834E /* Animation.cpp */; };
+		985D63C423E482BB00F1AA49 /* SpikeTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 985D63C223E482BB00F1AA49 /* SpikeTile.cpp */; };
+		985D63C723E48CF500F1AA49 /* SpringTile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 985D63C523E48CF500F1AA49 /* SpringTile.cpp */; };
 		98668F6F22C3C66700263C99 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98668F6D22C3C66700263C99 /* Parser.cpp */; };
 		98668F7322C3CB0E00263C99 /* ParsingException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98668F7122C3CB0E00263C99 /* ParsingException.cpp */; };
 		986BE2F522BA9E6E00B3A18D /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE2F322BA9E6E00B3A18D /* Game.cpp */; };
@@ -81,6 +83,10 @@
 		984C434222BD30110018CABD /* Factory.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Factory.hpp; sourceTree = "<group>"; };
 		984CE7C722CA6C310028834E /* Animation.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
 		984CE7C822CA6C310028834E /* Animation.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Animation.hpp; sourceTree = "<group>"; };
+		985D63C223E482BB00F1AA49 /* SpikeTile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpikeTile.cpp; sourceTree = "<group>"; };
+		985D63C323E482BB00F1AA49 /* SpikeTile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpikeTile.hpp; sourceTree = "<group>"; };
+		985D63C523E48CF500F1AA49 /* SpringTile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SpringTile.cpp; sourceTree = "<group>"; };
+		985D63C623E48CF500F1AA49 /* SpringTile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SpringTile.hpp; sourceTree = "<group>"; };
 		98668F6D22C3C66700263C99 /* Parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
 		98668F6E22C3C66700263C99 /* Parser.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Parser.hpp; sourceTree = "<group>"; };
 		98668F7122C3CB0E00263C99 /* ParsingException.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ParsingException.cpp; sourceTree = "<group>"; };
@@ -246,6 +252,10 @@
 				98C1255B22C2696E007F18FD /* Tile.cpp */,
 				98AA5ACB23E09B6A007A33A9 /* SolidTile.hpp */,
 				98AA5ACA23E09B6A007A33A9 /* SolidTile.cpp */,
+				985D63C323E482BB00F1AA49 /* SpikeTile.hpp */,
+				985D63C223E482BB00F1AA49 /* SpikeTile.cpp */,
+				985D63C623E48CF500F1AA49 /* SpringTile.hpp */,
+				985D63C523E48CF500F1AA49 /* SpringTile.cpp */,
 			);
 			path = Tile;
 			sourceTree = "<group>";
@@ -481,6 +491,7 @@
 			files = (
 				98C1255D22C2696E007F18FD /* Tile.cpp in Sources */,
 				98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */,
+				985D63C423E482BB00F1AA49 /* SpikeTile.cpp in Sources */,
 				98EDD6B622B6640F00942A49 /* Loader.cpp in Sources */,
 				986BE2F822BA9E9600B3A18D /* State.cpp in Sources */,
 				98CABB5822B66A4300698549 /* Parser.cpp in Sources */,
@@ -499,6 +510,7 @@
 				984CE7C922CA6C310028834E /* Animation.cpp in Sources */,
 				98A4488D22C11FB7008E56C9 /* Stopwatch.cpp in Sources */,
 				98C1256622C26E1B007F18FD /* Player.cpp in Sources */,
+				985D63C723E48CF500F1AA49 /* SpringTile.cpp in Sources */,
 				98C1256822C26E1B007F18FD /* Game.cpp in Sources */,
 				98F07B0522BABCB600134E17 /* Game.cpp in Sources */,
 				98F07B0222BABCA900134E17 /* Player.cpp in Sources */,

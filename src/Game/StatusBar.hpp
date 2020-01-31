@@ -13,7 +13,8 @@ public:
 	StatusBar(sf::Font& font, int maxLevel, sf::FloatRect bounds);
 	void update(const float& deltaTime);
 	void setLevel(const int& levelNumber);
-	void setRestarts(const int& restarts);
+	void incrementRestarts();
+	void stopStopwatch();
 	void draw(sf::RenderWindow& window);
 	
 private:

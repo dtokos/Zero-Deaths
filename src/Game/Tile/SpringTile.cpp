@@ -1,6 +1,8 @@
-#include "SolidTile.hpp"
+#include "SpringTile.hpp"
 
-void SolidTile::collideX(Player &player) {
+#define SPRING_FORCE -26
+
+void SpringTile::collideX(Player &player) {
 	sf::FloatRect playerBody = player.getColisionBody();
 	sf::FloatRect tileBody = this->body.getGlobalBounds();
 	sf::FloatRect intersection;
@@ -18,7 +20,7 @@ void SolidTile::collideX(Player &player) {
 	}
 }
 
-void SolidTile::collideY(Player &player) {
+void SpringTile::collideY(Player &player) {
 	sf::FloatRect playerBody = player.getColisionBody();
 	sf::FloatRect tileBody = this->body.getGlobalBounds();
 	sf::FloatRect intersection;
@@ -30,10 +32,13 @@ void SolidTile::collideY(Player &player) {
 		if (feetColision) {
 			newPosition.y = floor(tileBody.top - playerBody.height);
 			player.resetJump();
-		} else
+			player.setVelocityY(SPRING_FORCE);
+		} else {
 			newPosition.y = ceil(tileBody.top + tileBody.height);
+			player.setVelocityY(0);
+		}
 		
-		player.setVelocityY(0);
 		player.setPosition(newPosition);
 	}
 }
+

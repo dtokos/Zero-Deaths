@@ -23,6 +23,7 @@ private:
 	void updateY(const float& deltaTime);
 	void collideX();
 	void collideY();
+	void handleHazzards();
 	
 };
 

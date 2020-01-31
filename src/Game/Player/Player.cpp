@@ -35,6 +35,15 @@ void Player::jump() {
 	}
 }
 
+void Player::kill() {
+	this->alive = false;
+	
+	sf::IntRect textureRect = this->body.getTextureRect();
+	textureRect.left = 0;
+	textureRect.top = textureRect.height * 3;
+	this->body.setTextureRect(textureRect);
+}
+
 void Player::respawn() {
 	this->alive = true;
 }

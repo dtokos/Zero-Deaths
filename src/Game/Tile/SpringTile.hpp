@@ -1,9 +1,9 @@
-#ifndef SolidTile_hpp
-#define SolidTile_hpp
+#ifndef SpringTile_hpp
+#define SpringTile_hpp
 
 #include "./Tile.hpp"
 
-class SolidTile : public Tile {
+class SpringTile : public Tile {
 	using Tile::Tile;
 	
 	virtual void collideX(Player &player);

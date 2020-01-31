@@ -7,7 +7,7 @@ GameState::GameState(Player* player, LevelManager* levelManager, GameController*
 	levelManager(levelManager),
 	controller(controller),
 	statusBar(statusBar) {
-		this->loadLevel(FIRST_LEVEL);
+		this->loadLevel(21);
 }
 
 void GameState::handleInputs() {
@@ -15,12 +15,14 @@ void GameState::handleInputs() {
 }
 
 void GameState::restart() {
-	if (this->player->isDead())
+	if (this->player->isDead()) {
 		this->loadLevel(FIRST_LEVEL);
+		this->statusBar->incrementRestarts();
+	}
 }
 
 void GameState::update() {
-	if (this->isInFinish())
+	if (this->isInFinish() && !this->levelManager->didFinishAllLevels())
 		this->loadNextLevel();
 }
 
@@ -32,15 +34,18 @@ bool GameState::isInFinish() {
 }
 
 void GameState::loadLevel(int levelNumber) {
-	this->statusBar->setLevel(levelNumber);
 	this->levelManager->loadLevel(levelNumber);
 	this->spawnPlayer();
+	this->statusBar->setLevel(levelNumber);
 }
 
 void GameState::loadNextLevel() {
-	this->statusBar->setLevel(this->levelManager->currentNumber());
 	this->levelManager->loadNextLevel();
 	this->spawnPlayer();
+	this->statusBar->setLevel(this->levelManager->currentNumber());
+	
+	if (this->levelManager->didFinishAllLevels())
+		this->statusBar->stopStopwatch();
 }
 
 void GameState::spawnPlayer() {
@@ -49,4 +54,6 @@ void GameState::spawnPlayer() {
 	sf::Vector2f position = start->getPosition();
 	
 	this->player->setPosition(position);
+	this->player->setVelocityY(0);
+	this->player->respawn();
 }

@@ -23,7 +23,7 @@ void LevelManager::loadLevel(const int& levelNumber) {
 }
 
 bool LevelManager::didFinishAllLevels() {
-	return this->currentNumber() > this->lastLevelNumber;
+	return this->currentNumber() >= this->lastLevelNumber;
 }
 
 int LevelManager::currentNumber() {

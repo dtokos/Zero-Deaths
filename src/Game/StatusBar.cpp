@@ -10,6 +10,7 @@ StatusBar::StatusBar(sf::Font& font, int maxLevel, sf::FloatRect bounds) :
 		this->update(0);
 		this->alignStopwatch();
 		this->alignLevelInfo();
+		this->alignStats();
 }
 
 void StatusBar::update(const float& deltaTime) {
@@ -20,9 +21,13 @@ void StatusBar::setLevel(const int& levelNumber) {
 	this->levelInfo.setLevel(levelNumber);
 }
 
-void StatusBar::setRestarts(const int& restarts) {
-	this->stats.setRestarts(restarts);
+void StatusBar::incrementRestarts() {
+	this->stats.incrementRestarts();
 	this->alignStats();
+}
+
+void StatusBar::stopStopwatch() {
+	this->stopwatch.stop();
 }
 
 void StatusBar::draw(sf::RenderWindow& window) {
@@ -55,5 +60,5 @@ float StatusBar::centerX() {
 }
 
 float StatusBar::rightMargin() {
-	return this->bounds.left + this->bounds.width - MARGIN;
+	return this->bounds.left + this->bounds.width - MARGIN * 1.5;
 }

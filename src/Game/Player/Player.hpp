@@ -14,6 +14,7 @@ public:
 	void draw(sf::RenderWindow& window);
 	virtual void move(const PlayerMoveType& type);
 	virtual void jump();
+	void kill();
 	void respawn();
 	void resetJump();
 	void updateX(const float& deltaTime);

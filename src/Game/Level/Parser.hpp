@@ -5,6 +5,8 @@
 #include <tuple>
 #include "./Level.hpp"
 #include "../Tile/SolidTile.hpp"
+#include "../Tile/SpikeTile.hpp"
+#include "../Tile/SpringTile.hpp"
 #include "./Parser/ParsingException.hpp"
 
 class LevelParser {

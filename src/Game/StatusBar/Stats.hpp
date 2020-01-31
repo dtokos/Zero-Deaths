@@ -9,12 +9,13 @@ class Stats {
 	
 public:
 	Stats(sf::Font& font, int fontSize);
-	void setRestarts(const int& restarts);
+	void incrementRestarts();
 	void draw(sf::RenderWindow& window);
 	sf::FloatRect getBounds();
 	void setPosition(float x, float y);
 	
 private:
+	int restarts;
 	sf::Text text;
 	std::stringstream textStream;
 	

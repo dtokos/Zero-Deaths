@@ -6,7 +6,8 @@ Stopwatch::Stopwatch(sf::Font& font, int fontSize) :
 	seconds(0),
 	minutes(0),
 	hours(0),
-	textStream(std::stringstream()){
+	isRunning(true),
+	textStream(std::stringstream()) {
 	
 }
 
@@ -15,11 +16,18 @@ void Stopwatch::update(const float& deltaTime) {
 	this->updateText();
 }
 
+void Stopwatch::stop() {
+	this->isRunning = false;
+}
+
 void Stopwatch::draw(sf::RenderWindow& window) {
 	window.draw(this->text);
 }
 
 void Stopwatch::updateTime(const float& deltaTime) {
+	if (!this->isRunning)
+		return;
+	
 	this->miliSeconds += deltaTime;
 	this->seconds += this->miliSeconds / 1;
 	this->miliSeconds = fmod(this->miliSeconds, 1);
