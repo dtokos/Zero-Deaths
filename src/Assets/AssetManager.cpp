@@ -7,8 +7,8 @@
 #define LEVEL_TEXTURE TEXTURES "level.png"
 #define SANSATION_FONT FONTS "sansation.ttf"
 
-AssetManager::AssetManager() {
-	
+AssetManager::AssetManager(std::string path) :
+	resourcePath(path) {
 }
 
 sf::Texture& AssetManager::playerTexture() {
@@ -49,7 +49,7 @@ sf::Texture AssetManager::loadTexture(const TextureType& type) {
 	const std::string& textureName = this->getTextureName(type);
 	sf::Texture texure;
 	
-	if (!texure.loadFromFile(textureName))
+	if (!texure.loadFromFile(this->resourcePath + textureName))
 		throw AssetNotFound(textureName);
 	
 	return texure;
@@ -84,7 +84,7 @@ sf::Font AssetManager::loadFont(const FontType& type) {
 	const std::string& fontName = this->getFontName(type);
 	sf::Font font;
 	
-	if (!font.loadFromFile(fontName))
+	if (!font.loadFromFile(this->resourcePath + fontName))
 		throw AssetNotFound(fontName);
 	
 	return font;

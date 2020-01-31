@@ -9,10 +9,11 @@
 class GameFactory {
 	
 public:
-	GameFactory(ControllerFactory* controllerFactory, AssetManager* assetManager);
+	GameFactory(std::string resourcePath, ControllerFactory* controllerFactory, AssetManager* assetManager);
 	Game* makeGame();
 	
 private:
+	std::string resourcePath;
 	ControllerFactory* controllerFactory;
 	AssetManager* assetManager;
 	

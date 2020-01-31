@@ -11,7 +11,7 @@
 class ApplicationFactory {
 	
 public:
-	ApplicationFactory();
+	ApplicationFactory(std::string resourcePath);
 	Application make();
 	
 private:
@@ -22,7 +22,7 @@ private:
 	Letterbox* makeLetterbox(sf::View* view);
 	KeyboardConfig* defaultConfig();
 	KeyboardConfig* loadConfig();
-	GameFactory makeGameFactory();
+	GameFactory makeGameFactory(std::string resourcePath);
 	
 };
 

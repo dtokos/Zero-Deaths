@@ -1,6 +1,7 @@
 #include "Loader.hpp"
 
-LevelLoader::LevelLoader(LevelParser* parser) :
+LevelLoader::LevelLoader(std::string resourcePath, LevelParser* parser) :
+	resourcePath(resourcePath),
 	parser(parser) {
 	
 }
@@ -19,5 +20,5 @@ std::vector<unsigned char> LevelLoader::loadLevelContents(const int& levelNumber
 }
 
 std::string LevelLoader::getLevelPath(const int& levelNumber) {
-	return "./levels/" + std::to_string(levelNumber) + ".zdl";
+	return this->resourcePath + "./levels/" + std::to_string(levelNumber) + ".zdl";
 }

@@ -24,6 +24,10 @@
 		986BE30222BAA10200B3A18D /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE30022BAA10200B3A18D /* Player.cpp */; };
 		986BE30622BAA16C00B3A18D /* Level.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE30422BAA16C00B3A18D /* Level.cpp */; };
 		986BE30922BAA18700B3A18D /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 986BE30722BAA18700B3A18D /* Loader.cpp */; };
+		988EAAD523E4AACE00AB759E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 988EAAD423E4AACE00AB759E /* Images.xcassets */; };
+		988EAAF923E4B4EE00AB759E /* main.mm in Sources */ = {isa = PBXBuildFile; fileRef = 988EAAF823E4B4EE00AB759E /* main.mm */; };
+		988EAAFA23E4BD5400AB759E /* assets in Resources */ = {isa = PBXBuildFile; fileRef = 98C49A7722B5561800084A65 /* assets */; };
+		988EAAFB23E4BD5400AB759E /* levels in Resources */ = {isa = PBXBuildFile; fileRef = 98C49A7822B5561800084A65 /* levels */; };
 		98A4488922C11F6C008E56C9 /* StatusBar.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4488722C11F6C008E56C9 /* StatusBar.cpp */; };
 		98A4488D22C11FB7008E56C9 /* Stopwatch.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4488B22C11FB7008E56C9 /* Stopwatch.cpp */; };
 		98A4489022C12022008E56C9 /* LevelInfo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98A4488E22C12022008E56C9 /* LevelInfo.cpp */; };
@@ -38,15 +42,11 @@
 		98C49A7222B5514700084A65 /* libsfml-window.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A6F22B5514700084A65 /* libsfml-window.2.5.1.dylib */; };
 		98C49A7322B5514700084A65 /* libsfml-graphics.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7022B5514700084A65 /* libsfml-graphics.2.5.1.dylib */; };
 		98C49A7422B5514700084A65 /* libsfml-system.2.5.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 98C49A7122B5514700084A65 /* libsfml-system.2.5.1.dylib */; };
-		98C49A7B22B5562C00084A65 /* assets in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98C49A7722B5561800084A65 /* assets */; };
-		98C49A7C22B5562C00084A65 /* levels in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98C49A7822B5561800084A65 /* levels */; };
 		98CABB5822B66A4300698549 /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98CABB5622B66A4300698549 /* Parser.cpp */; };
 		98CABB5A22B6A43200698549 /* bindings.cfg in Resources */ = {isa = PBXBuildFile; fileRef = 98CABB5922B6A43200698549 /* bindings.cfg */; };
-		98CABB5B22B6A43C00698549 /* bindings.cfg in CopyFiles */ = {isa = PBXBuildFile; fileRef = 98CABB5922B6A43200698549 /* bindings.cfg */; };
 		98EDD6AD22B63B5200942A49 /* Letterbox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6A722B63B5100942A49 /* Letterbox.cpp */; };
 		98EDD6AE22B63B5200942A49 /* ApplicationFactory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6A822B63B5100942A49 /* ApplicationFactory.cpp */; };
 		98EDD6AF22B63B5200942A49 /* Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6AB22B63B5100942A49 /* Application.cpp */; };
-		98EDD6B022B63B5200942A49 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6AC22B63B5100942A49 /* main.cpp */; };
 		98EDD6B622B6640F00942A49 /* Loader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B422B6640F00942A49 /* Loader.cpp */; };
 		98EDD6B922B6648600942A49 /* Config.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98EDD6B722B6648600942A49 /* Config.cpp */; };
 		98F07AFC22BAB29900134E17 /* Manager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07AFA22BAB29900134E17 /* Manager.cpp */; };
@@ -54,21 +54,6 @@
 		98F07B0222BABCA900134E17 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07B0022BABCA900134E17 /* Player.cpp */; };
 		98F07B0522BABCB600134E17 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 98F07B0322BABCB600134E17 /* Game.cpp */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		98C49A7522B552E600084A65 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 16;
-			files = (
-				98CABB5B22B6A43C00698549 /* bindings.cfg in CopyFiles */,
-				98C49A7B22B5562C00084A65 /* assets in CopyFiles */,
-				98C49A7C22B5562C00084A65 /* levels in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		980E741722BBDCE500C499A3 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
@@ -105,6 +90,8 @@
 		986BE30522BAA16C00B3A18D /* Level.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Level.hpp; sourceTree = "<group>"; };
 		986BE30722BAA18700B3A18D /* Loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Loader.cpp; sourceTree = "<group>"; };
 		986BE30822BAA18700B3A18D /* Loader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Loader.hpp; sourceTree = "<group>"; };
+		988EAAD423E4AACE00AB759E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		988EAAF823E4B4EE00AB759E /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = main.mm; sourceTree = "<group>"; };
 		98A4488722C11F6C008E56C9 /* StatusBar.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StatusBar.cpp; sourceTree = "<group>"; };
 		98A4488822C11F6C008E56C9 /* StatusBar.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StatusBar.hpp; sourceTree = "<group>"; };
 		98A4488B22C11FB7008E56C9 /* Stopwatch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Stopwatch.cpp; sourceTree = "<group>"; };
@@ -143,7 +130,6 @@
 		98EDD6A922B63B5100942A49 /* Letterbox.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Letterbox.hpp; sourceTree = "<group>"; };
 		98EDD6AA22B63B5100942A49 /* ApplicationFactory.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ApplicationFactory.hpp; sourceTree = "<group>"; };
 		98EDD6AB22B63B5100942A49 /* Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Application.cpp; sourceTree = "<group>"; };
-		98EDD6AC22B63B5100942A49 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		98EDD6B422B6640F00942A49 /* Loader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Loader.cpp; sourceTree = "<group>"; };
 		98EDD6B522B6640F00942A49 /* Loader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Loader.hpp; sourceTree = "<group>"; };
 		98EDD6B722B6648600942A49 /* Config.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Config.cpp; sourceTree = "<group>"; };
@@ -309,6 +295,7 @@
 		98C49A5122B54FA600084A65 /* Zero-Deaths */ = {
 			isa = PBXGroup;
 			children = (
+				988EAAF823E4B4EE00AB759E /* main.mm */,
 				98EDD6A422B63B5100942A49 /* src */,
 				98C49A7722B5561800084A65 /* assets */,
 				98C49A7822B5561800084A65 /* levels */,
@@ -321,6 +308,7 @@
 		98C49A5222B54FA600084A65 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				988EAAD423E4AACE00AB759E /* Images.xcassets */,
 				98C49A5322B54FA600084A65 /* Zero-Deaths-Info.plist */,
 			);
 			name = "Supporting Files";
@@ -343,7 +331,6 @@
 				98B731BA22B94E890020AFD5 /* Assets */,
 				98EDD6B322B663E200942A49 /* Controllers */,
 				98EDD6B222B663A900942A49 /* Game */,
-				98EDD6AC22B63B5100942A49 /* main.cpp */,
 			);
 			name = src;
 			path = ../../../src;
@@ -411,7 +398,6 @@
 				98C49A4B22B54FA600084A65 /* Frameworks */,
 				98C49A4C22B54FA600084A65 /* Resources */,
 				98C49A4D22B54FA600084A65 /* ShellScript */,
-				98C49A7522B552E600084A65 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -458,7 +444,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				988EAAFA23E4BD5400AB759E /* assets in Resources */,
+				988EAAFB23E4BD5400AB759E /* levels in Resources */,
 				98CABB5A22B6A43200698549 /* bindings.cfg in Resources */,
+				988EAAD523E4AACE00AB759E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -506,7 +495,6 @@
 				986BE30222BAA10200B3A18D /* Player.cpp in Sources */,
 				98A4489022C12022008E56C9 /* LevelInfo.cpp in Sources */,
 				98EDD6B922B6648600942A49 /* Config.cpp in Sources */,
-				98EDD6B022B63B5200942A49 /* main.cpp in Sources */,
 				984CE7C922CA6C310028834E /* Animation.cpp in Sources */,
 				98A4488D22C11FB7008E56C9 /* Stopwatch.cpp in Sources */,
 				98C1256622C26E1B007F18FD /* Player.cpp in Sources */,
@@ -527,6 +515,7 @@
 				98668F7322C3CB0E00263C99 /* ParsingException.cpp in Sources */,
 				980E741C22BBDCFD00C499A3 /* Player.cpp in Sources */,
 				986BE30922BAA18700B3A18D /* Loader.cpp in Sources */,
+				988EAAF923E4B4EE00AB759E /* main.mm in Sources */,
 				98A4488922C11F6C008E56C9 /* StatusBar.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -625,6 +614,8 @@
 		98C49A6522B54FA600084A65 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_OPTIMIZATION_LEVEL = s;
 				HEADER_SEARCH_PATHS = (
@@ -641,6 +632,8 @@
 		98C49A6622B54FA600084A65 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				GCC_OPTIMIZATION_LEVEL = s;
 				HEADER_SEARCH_PATHS = (

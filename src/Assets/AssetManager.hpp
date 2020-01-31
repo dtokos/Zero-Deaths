@@ -10,7 +10,7 @@
 class AssetManager {
 
 public:
-	AssetManager();
+	AssetManager(std::string resoucePath);
 	sf::Texture& playerTexture();
 	sf::Texture& levelTexture();
 	sf::Font& sansationFont();
@@ -24,6 +24,8 @@ private:
 	enum FontType {
 		sansation,
 	};
+	
+	std::string resourcePath;
 	
 	std::map<TextureType, sf::Texture> textureCache;
 	static const std::map<TextureType, std::string> textureNameMap;

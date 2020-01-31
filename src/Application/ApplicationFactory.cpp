@@ -10,9 +10,9 @@
 
 #define CONFIG_NAME "bindings.cfg"
 
-ApplicationFactory::ApplicationFactory() :
-	gameFactory(this->makeGameFactory()) {
-	
+ApplicationFactory::ApplicationFactory(std::string resourcePath) :
+	gameFactory(this->makeGameFactory(resourcePath)) {
+		
 }
 
 Application ApplicationFactory::make() {
@@ -60,9 +60,10 @@ KeyboardConfig* ApplicationFactory::loadConfig() {
 	return defaultConfig;
 }
 
-GameFactory ApplicationFactory::makeGameFactory() {
+GameFactory ApplicationFactory::makeGameFactory(std::string resourcePath) {
 	KeyboardConfig* config = this->loadConfig();
 	ControllerFactory* controllerFactory = new KeyboardControllerFactory(config);
+	AssetManager* assetManager = new AssetManager(resourcePath);
 	
-	return GameFactory(controllerFactory, new AssetManager());
+	return GameFactory(resourcePath, controllerFactory, assetManager);
 }

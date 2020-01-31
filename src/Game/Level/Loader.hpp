@@ -10,10 +10,11 @@
 class LevelLoader {
 
 public:
-	LevelLoader(LevelParser* parser);
+	LevelLoader(std::string resourcePath, LevelParser* parser);
 	Level* load(const int& levelNumber);
 	
 private:
+	std::string resourcePath;
 	LevelParser* parser;
 	
 	std::vector<unsigned char> loadLevelContents(const int& levelNumber);

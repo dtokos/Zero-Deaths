@@ -41,6 +41,9 @@ void Application::handleEvents() {
 			case sf::Event::Resized:
 				this->letterbox->apply(event.size.width, event.size.height);
 				break;
+				
+			default:
+				break;
 		}
 	}
 }
