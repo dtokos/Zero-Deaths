@@ -7,7 +7,7 @@ GameState::GameState(Player* player, LevelManager* levelManager, GameController*
 	levelManager(levelManager),
 	controller(controller),
 	statusBar(statusBar) {
-		this->loadLevel(21);
+		this->loadLevel(FIRST_LEVEL);
 }
 
 void GameState::handleInputs() {
