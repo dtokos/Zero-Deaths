@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6D0CAEF8-35A2-443A-962D-A21333C0CD98}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>ZeroDeaths</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../src;$(SolutionDir)/../../lib/windows/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/../../lib/windows/SFML/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main-d.lib;sfml-graphics-d.lib;sfml-window-d.lib;sfml-system-d.lib;sfml-audio-d.lib;sfml-network-d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I $(SolutionDir)..\..\assets $(OutDir)assets
+xcopy /E /I $(SolutionDir)..\..\levels $(OutDir)levels
+copy $(SolutionDir)..\..\bindings.cfg $(OutDir)bindings.cfg
+
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\openal32.dll $(OutDir)openal32.dll
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\sfml-graphics-d-2.dll $(OutDir)sfml-graphics-d-2.dll
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\sfml-system-d-2.dll $(OutDir)sfml-system-d-2.dll
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\sfml-window-d-2.dll $(OutDir)sfml-window-d-2.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)/../../src;$(SolutionDir)/../../lib/windows/SFML/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)/../../lib/windows/SFML/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-main.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;sfml-audio.lib;sfml-network.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /E /I $(SolutionDir)..\..\assets $(OutDir)assets
+xcopy /E /I $(SolutionDir)..\..\levels $(OutDir)levels
+copy $(SolutionDir)..\..\bindings.cfg $(OutDir)bindings.cfg
+
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\openal32.dll $(OutDir)openal32.dll
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\sfml-graphics-2.dll $(OutDir)sfml-graphics-2.dll
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\sfml-system-2.dll $(OutDir)sfml-system-2.dll
+copy $(SolutionDir)..\..\lib\windows\SFML\bin\sfml-window-2.dll $(OutDir)sfml-window-2.dll</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\Application\Application.hpp" />
+    <ClInclude Include="..\..\..\src\Application\ApplicationFactory.hpp" />
+    <ClInclude Include="..\..\..\src\Application\Letterbox.hpp" />
+    <ClInclude Include="..\..\..\src\Assets\AssetManager.hpp" />
+    <ClInclude Include="..\..\..\src\Assets\AssetNotFound.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Factory.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Game.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Keyboard\Config.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Keyboard\Config\Loader.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Keyboard\Config\Parser.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Keyboard\Factory.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Keyboard\Game.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Keyboard\Player.hpp" />
+    <ClInclude Include="..\..\..\src\Controllers\Player.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Controls\Game.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Controls\Player.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Controls\PlayerMoveType.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Factory.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Game.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Level\Current.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Level\Level.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Level\Loader.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Level\Manager.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Level\Parser.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Level\Parser\ParsingException.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Loop.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Player\Animation.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Player\Player.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Renderer.hpp" />
+    <ClInclude Include="..\..\..\src\Game\State.hpp" />
+    <ClInclude Include="..\..\..\src\Game\StatusBar.hpp" />
+    <ClInclude Include="..\..\..\src\Game\StatusBar\LevelInfo.hpp" />
+    <ClInclude Include="..\..\..\src\Game\StatusBar\Stats.hpp" />
+    <ClInclude Include="..\..\..\src\Game\StatusBar\Stopwatch.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Tile\SolidTile.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Tile\SpikeTile.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Tile\SpringTile.hpp" />
+    <ClInclude Include="..\..\..\src\Game\Tile\Tile.hpp" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\Application\Application.cpp" />
+    <ClCompile Include="..\..\..\src\Application\ApplicationFactory.cpp" />
+    <ClCompile Include="..\..\..\src\Application\Letterbox.cpp" />
+    <ClCompile Include="..\..\..\src\Assets\AssetManager.cpp" />
+    <ClCompile Include="..\..\..\src\Assets\AssetNotFound.cpp" />
+    <ClCompile Include="..\..\..\src\Controllers\Factory.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersFactory</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersFactory</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Game.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersGame</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersGame</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Keyboard\Config.cpp" />
+    <ClCompile Include="..\..\..\src\Controllers\Keyboard\Config\Loader.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersKeyboardConfigLoader</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersKeyboardConfigLoader</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Keyboard\Config\Parser.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersKeyboardConfigParser</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersKeyboardConfigParser</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Keyboard\Factory.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersKeyboardKeyboardControllerFactory</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersKeyboardKeyboardControllerFactory</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Keyboard\Game.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersKeyboardGame</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersKeyboardGame</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Keyboard\Player.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersKeyboardPlayer</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersKeyboardPlayer</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Controllers\Player.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ControllersPlayer</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ControllersPlayer</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Controls\Game.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GameControlsGame</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GameControlsGame</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Controls\Player.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GameControlsPlayer</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GameControlsPlayer</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Controls\PlayerMoveType.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Factory.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GameGameFactory</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GameGameFactory</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Game.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GameGame</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GameGame</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Level\Current.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Level\Level.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Level\Loader.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GameLevelLoader</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GameLevelLoader</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Level\Manager.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Level\Parser.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GameLevelParser</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GameLevelParser</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Level\Parser\ParsingException.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Loop.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Player\Animation.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Player\Player.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)GamePlayerPlayer</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)GamePlayerPlayer</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\Game\Renderer.cpp" />
+    <ClCompile Include="..\..\..\src\Game\State.cpp" />
+    <ClCompile Include="..\..\..\src\Game\StatusBar.cpp" />
+    <ClCompile Include="..\..\..\src\Game\StatusBar\LevelInfo.cpp" />
+    <ClCompile Include="..\..\..\src\Game\StatusBar\Stats.cpp" />
+    <ClCompile Include="..\..\..\src\Game\StatusBar\Stopwatch.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Tile\SolidTile.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Tile\SpikeTile.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Tile\SpringTile.cpp" />
+    <ClCompile Include="..\..\..\src\Game\Tile\Tile.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Zero-Deaths.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
