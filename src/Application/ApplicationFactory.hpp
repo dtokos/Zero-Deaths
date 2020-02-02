@@ -21,7 +21,7 @@ private:
 	sf::View* makeView();
 	Letterbox* makeLetterbox(sf::View* view);
 	KeyboardConfig* defaultConfig();
-	KeyboardConfig* loadConfig();
+	KeyboardConfig* loadConfig(std::string resourcePath);
 	GameFactory makeGameFactory(std::string resourcePath);
 	
 };

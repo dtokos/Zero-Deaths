@@ -48,10 +48,10 @@ KeyboardConfig* ApplicationFactory::defaultConfig() {
 	return new KeyboardConfig(sf::Keyboard::Key::Right, sf::Keyboard::Key::Left, sf::Keyboard::Key::Up, sf::Keyboard::Key::R);
 };
 
-KeyboardConfig* ApplicationFactory::loadConfig() {
+KeyboardConfig* ApplicationFactory::loadConfig(std::string resourcePath) {
 	KeyboardConfigLoader loader;
 	KeyboardConfig* defaultConfig = this->defaultConfig();
-	KeyboardConfig* userConfig = loader.load(CONFIG_NAME);
+	KeyboardConfig* userConfig = loader.load(resourcePath + CONFIG_NAME);
 	
 	defaultConfig->merge(*userConfig);
 	
@@ -61,7 +61,7 @@ KeyboardConfig* ApplicationFactory::loadConfig() {
 }
 
 GameFactory ApplicationFactory::makeGameFactory(std::string resourcePath) {
-	KeyboardConfig* config = this->loadConfig();
+	KeyboardConfig* config = this->loadConfig(resourcePath);
 	ControllerFactory* controllerFactory = new KeyboardControllerFactory(config);
 	AssetManager* assetManager = new AssetManager(resourcePath);
 	
